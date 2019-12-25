@@ -588,7 +588,118 @@ ideas = {
 			}
 		}
 		
-	
+		quantity_over_quality = { #infantry weapons cheaper but worse stats
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10 
+					soft_attack = -0.05
+					instant = yes
+				}
+			}
+			
+		}
+		
+		quality_over_quantity = { #tanks pricier but better stats
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_production_bonus
+			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = 0.10 
+					soft_attack = 0.05
+					instant = yes
+				}
+			}
+			
+		}
+		
+		adaptability = { #lowers supply consumption + weather acclimization
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = eng_service_overseas
+			
+			modifier = {
+				supply_consumption_factor = 0.05
+				acclimatization_hot_climate_gain_factor = 0.05
+				acclimatization_cold_climate_gain_factor = 0.05
+			}
+			
+		}
+		
+		special_strike_forces = { #buffs tanks
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_acquire_tanks
+			
+			modifier = {
+				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.10
+			}
+			
+		}
+		
+		cheaper_convoys = { #convoys production cheaper
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_navy_bonus
+			
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
 	
 	}
 	

@@ -25,3 +25,74 @@
  AKI_recover_technology:0 "Recover Technology"
  AKI_anime_studios:0 "Anime Studios"
  AKI_university_of_future:0 "Akihabara University of the Future"
+ 
+ # Military
+ AKI_formation_of_an_army:0 "Formation of an Army"
+ AKI_formation_of_an_army_desc:0 "Without a proper army, we are unable to defend ourselves from invasions. We will need to form a new army with the help of the soldiers transported along with us."
+
+ AKI_every_man_a_soldier:0 "Every Man a Soldier!"
+ AKI_every_man_a_soldier_desc:0 "With our small numbers, it would be impossible to fend of attacks without mobilizing most of our population. We must train them with haste!"
+ AKI_quantity_over_quality:0 "Quantity Over Quality"
+ AKI_quantity_over_quality_desc:0 ""With our limited military industrial capacities, we will have to lower our production standards to be able to equip our soldiers."
+ AKI_promote_the_military_otaku_culture:0 "Promote the Military Otaku Culture"
+ AKI_promote_the_military_otaku_culture_desc:0 "We can gain more support for our recruiment drive through the promotion of military culture with the use of anime and manga mediums of course."
+ AKI_adaptability:0 "Adaptability"
+ AKI_adaptability_desc:0 "By adapting to all sorts of rough terrains, will be able to harass and outclass our enemies with our experience."
+ AKI_the_might_of_the_people:0 "The Might of the People"
+ AKI_the_might_of_the_people_Desc:0 "Our people are motivated and willing to fight for our survival! We will endure any threat from our enemies!"
+
+ AKI_panzer_vor:0 "Panzer Vor!"
+ AKI_panzer_vor_desc:0 "Modern warfare has proven the capabilities of mobile forces. With our technical expertise and limited numbers, it would make the most sense for our army to comprise mainly of tanks and trucks."
+ AKI_quality_over_quantity:0 "Quality Over Quantity"
+ AKI_quality_over_quantity_desc:0 "To overcome our disadvantage in numbers, we could instead focus on our technical advantage to have higher quality weapons."
+ AKI_introduce_senshado:0 "Introduce Sensha-Do"
+ AKI_special_strike_forces:0 "Special Strike Forces"
+ AKI_special_strike_forces_desc:0 "As we have professional soldiers already with us, we could have them help reform our army into special strike forces."
+ AKI_train_the_officers:0 "Train the Officers"
+ AKI_train_the_officers_desc:0 "Our military officers will have to adapt to the time period by studying military strategies during that time, allowing them to have a tactical advantage over our enemies."
+
+ AKI_anime_conscripts:0 "Anime Conscripts"
+
+ AKI_school_uniforms:0 "School Uniforms"
+ AKI_waifu_warpainting:0 "Waifu Warpainting"
+
+ AKI_modern_camo:0 "Modern Camo"
+ AKI_modern_vehicles:0 "Modern Vehicles"
+
+ AKI_special_forces_academy:0 "Special Forces Academy"
+ AKI_super_weapon:0 "Super Weapon"
+ 
+ # Navy
+ AKI_formation_of_a_navy:0 "Formation of a Navy"
+
+ AKI_invest_in_carriers:0 "Invest in Carriers"
+ AKI_invest_in_carriers_desc:0 "Control over the skies has proven to be decisive in our naval history, we should focus on ships that can give us that."
+ AKI_floating_airbases:0 "Floating Airbases"
+ AKI_floating_airbases_desc:0 "We will need to begin our research into carriers in order to for us to have the means of producing them."
+ AKI_shokaku_class_carriers:0 "Shokaku Class Carriers"
+ AKI_shokaku_class_carriers_desc:0 "Our experts have drawn up plans for an advanced carrier, ready for production!"
+
+ AKI_invest_in_battleships:0 "Invest in Battleships"
+ AKI_invest_in_battleships_desc:0 "The Imperial Japanese Navy had some of the best battleships built in service, we should mirror our ancestors by giving battleships lead roles."
+ AKI_floating_fortresses:0 "Floating Fortresses"
+ AKI_floating_fortresses_desc:0 "We will need to begin our research into battleships in order to for us to have the means of producing them."
+ AKI_yamato_class_battleships:0 "Yamato Class Battleships"
+ AKI_yamato_class_battleships_desc:0 "Our experts have drawn up plans for an advanced battleship, ready for production!"
+
+ AKI_convoy_production:0 "Convoy Production"
+ AKI_convoy_production_desc:0 "We can focus our production temporarily to produce convoys to help supply our troops."
+ AKI_re_form_the_snlf:0 "Re-Form the SNLF"
+ AKI_re_form_the_snlf_dsc:0 "The Special Naval Landing Forces were the elite marines of the Imperial Japanese Navy. We should have our own as well."
+
+ AKI_shipgirls_discovery:0 "Shipgirls Discovery"
+
+ AKI_favor_kancolle:0 "Favor Kancolle"
+ AKI_favor_azur_lane:0 "Favor Azur Lane"
+
+ AKI_shipgirl_commanders:0 "Shipgirl Commanders"
+ AKI_improved_shipbuilding:0 "Improved Shipbuilding"
+ AKI_the_new_dorm:0 "The New Dorm"
+ AKI_oil_canteen:0 "Oil Canteen"
+ AKI_open_the_academy:0 "Open the Academy"
+ AKI_tactic_classes:0 "Tactic Classes"
+ 

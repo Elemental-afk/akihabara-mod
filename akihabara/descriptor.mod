@@ -1,4 +1,4 @@
-version="1.8.*"
+#version="1.8.*" not important
 tags={
 	"Alternative History"
 	"National Focuses"
@@ -6,4 +6,4 @@ tags={
 	"Events"
 }
 name="Akihabara Returns: Anime Nation Mod"
-supported_version="1.8.1"
+supported_version="1.8.*"

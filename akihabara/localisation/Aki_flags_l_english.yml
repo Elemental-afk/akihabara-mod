@@ -1,2 +1,7 @@
 ﻿l_english:
  stop_having_it_be_closed:0 "Free Trade Enacted"
+ 
+ # not flags but tooltips
+ AKI_shokaku_class_carriers_tt:0 "Adds two Shokaku Class Aircraft Carriers to the production queue."
+ AKI_yamato_class_battleships_tt:0 "Adds two Yamato Class Battleships to the production queue."
+ AKI_new_dorm_tt:0 "Increases Shipgirl Happiness by §G25§!"

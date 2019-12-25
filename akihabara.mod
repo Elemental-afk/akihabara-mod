@@ -1,4 +1,4 @@
-version="1.8.*"
+#version="1.8.*" not important
 tags={
 	"Alternative History"
 	"National Focuses"
@@ -6,5 +6,5 @@ tags={
 	"Events"
 }
 name="Akihabara Returns: Anime Nation Mod"
-supported_version="1.8.1"
-path="C:/Users/KomiDomi/Documents/Paradox Interactive/Hearts of Iron IV/mod/akihabara"
+supported_version="1.8.*"
+path="mod/akihabara/"

@@ -1220,304 +1220,1222 @@ focus_tree = {
 	}
 	
 	focus = {
+
 		id = AKI_formation_of_an_army
 		icon = GFX_unknown
-		x = 29
+		x = 30 #dunno ill put it there for now
 		y = 0
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
 		
-		completion_reward = {
-			
-		}
-	}
+		cost = 10
+
+		available_if_capitulated = yes
 	
+		completion_reward = {
+			army_experience = 50
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
 	focus = {
-		id = AKI_the_man_in_army
-		prerequisite = { focus = AKI_formation_of_an_army }
-		mutually_exclusive = { focus = AKI_the_rifle_in_army }
+
+		id = AKI_every_man_a_soldier
 		icon = GFX_unknown
-		x = 27
+		prerequisite = { 
+			focus = AKI_formation_of_an_army 
+		}
+		mutually_exclusive = { 
+			focus = AKI_panzer_vor 
+		}
+		x = -3
 		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
+		relative_position_id = AKI_formation_of_an_army
 		
-		completion_reward = {
-			
-		}
-	}
+		cost = 10
+
+		available_if_capitulated = yes
 	
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Every Man a Soldier"
+				bonus = 1.0
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
 	focus = {
-		id = AKI_the_rifle_in_army
-		prerequisite = { focus = AKI_formation_of_an_army }
-		mutually_exclusive = { focus = AKI_the_man_in_army }
+
+		id = AKI_quantity_over_quality
 		icon = GFX_unknown
-		x = 31
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
+		prerequisite = { 
+			focus = AKI_every_man_a_soldier 
 		}
+		x = -3
+		y = 2
+		relative_position_id = AKI_formation_of_an_army
 		
-		completion_reward = {
-			
-		}
-	}
+		cost = 10
+
+		available_if_capitulated = yes
 	
+		completion_reward = {
+			add_timed_idea = {
+				idea = quantity_over_quality
+				days = 365
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}	
+
+	}
+
 	focus = {
+
+		id = AKI_promote_the_military_otaku_culture
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_quantity_over_quality 
+		}
+		x = -3
+		y = 3
+		relative_position_id = AKI_formation_of_an_army
+		
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_adaptability
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_promote_the_military_otaku_culture 
+		}
+		x = -3
+		y = 4
+		relative_position_id = AKI_formation_of_an_army
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_ideas = adaptability
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_the_might_of_the_people
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_adaptability 
+		}
+		x = -3
+		y = 5
+		relative_position_id = AKI_formation_of_an_army
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = service_by_requirement
+					has_idea = all_adults_serve
+					has_idea = scraping_the_barrel
+				}
+				add_war_support = 0.10
+			}
+			else = {
+				add_ideas = service_by_requirement
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_panzer_vor
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_formation_of_an_army 
+		}
+		mutually_exclusive = { 
+			focus = AKI_every_man_a_soldier
+		}
+		x = 3
+		y = 1
+		relative_position_id = AKI_formation_of_an_army
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Panzer Vor!"
+				bonus = 1.0
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_quality_over_quantity
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_panzer_vor 
+		}
+		x = 3
+		y = 2
+		relative_position_id = AKI_formation_of_an_army
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = quality_over_quantity
+				days = 365
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_introduce_senshado
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_quality_over_quantity 
+		}
+		x = 3
+		y = 3
+		relative_position_id = AKI_formation_of_an_army
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_special_strike_forces
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_introduce_senshado 
+		}
+		x = 3
+		y = 4
+		relative_position_id = AKI_formation_of_an_army
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_ideas = special_strike_forces
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_train_the_officers
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_special_strike_forces 
+		}
+		x = 3
+		y = 5
+		relative_position_id = AKI_formation_of_an_army
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			every_army_leader = {
+				add_planning = 1
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
 		id = AKI_anime_conscripts
-		prerequisite = { focus = AKI_the_man_in_army focus = AKI_the_rifle_in_army }
 		icon = GFX_unknown
-		x = 29
+		prerequisite = { 
+			focus = AKI_every_man_a_soldier
+			focus = AKI_panzer_vor
+		}
+		x = 0
 		y = 2
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
+		relative_position_id = AKI_formation_of_an_army
 		
-		completion_reward = {
-			
-		}
-	}
+		cost = 10
+
+		available_if_capitulated = yes
 	
+		completion_reward = {
+
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
 	focus = {
+
 		id = AKI_school_uniforms
-		prerequisite = { focus = AKI_anime_conscripts }
-		mutually_exclusive = { focus = AKI_modern_camo }
 		icon = GFX_unknown
-		x = 28
+		prerequisite = { 
+			focus = AKI_anime_conscripts 
+		}
+		mutually_exclusive = { 
+			focus = AKI_modern_camo 
+		}
+		x = -1
 		y = 3
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
+		relative_position_id = AKI_formation_of_an_army
 		
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = AKI_modern_camo
-		prerequisite = { focus = AKI_anime_conscripts }
-		mutually_exclusive = { focus = AKI_school_uniforms }
-		icon = GFX_unknown
-		x = 30
-		y = 3
 		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
-		
-		completion_reward = {
-			
-		}
-	}
+
+		available_if_capitulated = yes
 	
+		completion_reward = {
+		
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
 	focus = {
+
 		id = AKI_waifu_warpainting
-		prerequisite = { focus = AKI_school_uniforms focus = AKI_modern_camo }
-		mutually_exclusive = { focus = AKI_modern_vehicles }
 		icon = GFX_unknown
-		x = 28
+		prerequisite = { 
+			focus = AKI_school_uniforms 
+		}
+		x = -1
 		y = 4
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
+		relative_position_id = AKI_formation_of_an_army
 		
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = AKI_modern_vehicles
-		prerequisite = { focus = AKI_school_uniforms focus = AKI_modern_camo }
-		mutually_exclusive = { focus = AKI_waifu_warpainting }
-		icon = GFX_unknown
-		x = 30
-		y = 4
 		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
-		
-		completion_reward = {
-			
-		}
-	}
+
+		available_if_capitulated = yes
 	
-	focus = {
-		id = AKI_man_1
-		prerequisite = { focus = AKI_the_man_in_army }
-		icon = GFX_unknown
-		x = 27
-		y = 2
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
-		
 		completion_reward = {
-			
+		
 		}
-	}
 	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
 	focus = {
-		id = AKI_man_2
-		prerequisite = { focus = AKI_man_1 }
+
+		id = AKI_modern_camo
 		icon = GFX_unknown
-		x = 26
+		prerequisite = { 
+			focus = AKI_anime_conscripts 
+		}
+		mutually_exclusive = { 
+			focus = AKI_waifu_warpainting 
+		}
+		x = 1
 		y = 3
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
+		relative_position_id = AKI_formation_of_an_army
 		
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = AKI_man_3
-		prerequisite = { focus = AKI_man_2 }
-		icon = GFX_unknown
-		x = 26
-		y = 4
 		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
-		
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = AKI_man_4
-		prerequisite = { focus = AKI_man_3 }
-		icon = GFX_unknown
-		x = 26
-		y = 5
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
-		
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = AKI_rifle_1
-		prerequisite = { focus = AKI_the_rifle_in_army }
-		icon = GFX_unknown
-		x = 31
-		y = 2
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
-		
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = AKI_rifle_2
-		prerequisite = { focus = AKI_rifle_1 }
-		icon = GFX_unknown
-		x = 32
-		y = 3
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
-		
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = AKI_rifle_3
-		prerequisite = { focus = AKI_rifle_2 }
-		icon = GFX_unknown
-		x = 32
-		y = 4
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
-		
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = AKI_rifle_4
-		prerequisite = { focus = AKI_rifle_3 }
-		icon = GFX_unknown
-		x = 32
-		y = 5
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
-		
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = AKI_special_forces_academy
-		prerequisite = { focus = AKI_rifle_4 focus = AKI_man_4 }
-		prerequisite = { focus = AKI_waifu_warpainting focus = AKI_modern_vehicles }
-		icon = GFX_unknown
-		x = 29
-		y = 6
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
-		
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-		id = AKI_superweapon
-		prerequisite = { focus = AKI_special_forces_academy }
-		icon = GFX_unknown
-		x = 29
-		y = 7
-		cost = 10
-		ai_will_do = {
-			factor = #tbd 
-		}
-		
-		completion_reward = {
-			
-		}
-	}
-	
-	
-	
-	
+
+		available_if_capitulated = yes
 
 	
+		completion_reward = {
+		
+		}
 	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_modern_vehicles
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_modern_camo 
+		}
+		x = 1
+		y = 4
+		relative_position_id = AKI_formation_of_an_army
+		
+		cost = 10
+
+		available_if_capitulated = yes
 	
+		completion_reward = {
+		
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_special_forces_academy
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_the_might_of_the_people
+			focus = AKI_train_the_officers
+		}
+		prerequisite = { 
+			focus = AKI_modern_vehicles
+			focus = AKI_waifu_warpainting
+		}
+		x = 0
+		y = 6
+		relative_position_id = AKI_formation_of_an_army
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_super_weapon
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_special_forces_academy
+		}
+		x = 0
+		y = 7
+		relative_position_id = AKI_formation_of_an_army
+		
+		cost = 10
+		
+		available_if_capitulated = yes
+	
+		completion_reward = {
+		
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_formation_of_a_navy
+		icon = GFX_unknown
+		x = 40 #dunno ill put it there for now
+		y = 0
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			navy_experience = 50
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_invest_in_carriers
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_formation_of_a_navy 
+		}
+		mutually_exclusive = { 
+			focus = AKI_invest_in_battleships
+		}
+		x = -3
+		y = 1
+		relative_position_id = AKI_formation_of_a_navy
+		
+		cost = 10
+	
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Carrier Focus"
+				bonus = 1.0
+				uses = 2
+				category = cat_base_strike
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_floating_airbases
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_invest_in_carriers 
+		}
+		x = -3
+		y = 2
+		relative_position_id = AKI_formation_of_a_navy
+		
+		cost = 10
+	
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Carrier Development"
+				bonus = 1.0
+				uses = 2
+				category = cv_tech
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_shokaku_class_carriers
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_floating_airbases 
+		}
+		x = -3
+		y = 3
+		relative_position_id = AKI_formation_of_a_navy
+		
+		cost = 10
+	
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			if = {
+				limit = {
+					not = { has_dlc = "Man the Guns" }
+				}
+				if = {
+					limit = {
+						not = { has_tech = basic_carrier }
+					}
+					set_technology = {
+						basic_carrier = 1
+					}
+				}
+				custom_effect_tooltip = AKI_shokaku_class_carriers_tt
+				hidden_effect = {
+					create_equipment_variant = {
+						name = "Shokaku Class"
+						type = carrier_2
+						parent_version = 0
+						upgrades = {
+							ship_deckspace_upgrade = 1
+							carrier_armor_upgrade = 0
+							ship_engine_upgrade = 0
+							ship_reliability_upgrade = 1
+						}
+					}
+					add_equipment_production = {
+						equipment = {
+							type = carrier_2
+							creator = "AKI" 
+							version_name = "Shokaku Class"
+						}
+						name = "Shokaku" 
+						requested_factories = 1
+						progress = 0.9
+						amount = 1
+					}
+					add_equipment_production = {
+						equipment = {
+							type = carrier_2
+							creator = "AKI" 
+							version_name = "Shokaku Class"
+						}
+						name = "Zuikaku" 
+						requested_factories = 1
+						progress = 0.9
+						amount = 1
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						not = { has_tech = improved_ship_hull_carrier }
+					}
+					set_technology = {
+						improved_ship_hull_carrier = 1
+					}
+				}
+				custom_effect_tooltip = AKI_shokaku_class_carriers_tt
+				hidden_effect = {
+					create_equipment_variant = {
+						name = "Shokaku Class"
+						type = ship_hull_carrier_2
+						parent_version = 0
+						modules = {
+							fixed_ship_deck_slot_1 = ship_deck_space
+							fixed_ship_deck_slot_2 = ship_deck_space
+							fixed_ship_anti_air_slot = empty
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = carrier_ship_engine_2
+							fixed_ship_secondaries_slot = empty
+							front_1_custom_slot = ship_deck_space
+							mid_1_custom_slot = ship_deck_space
+						}
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_carrier_2
+							creator = "AKI" 
+							version_name = "Shokaku Class"
+						}
+						name = "Shokaku" 
+						requested_factories = 1
+						progress = 0.9
+						amount = 1
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_carrier_2
+							creator = "AKI" 
+							version_name = "Shokaku Class"
+						}
+						name = "Zuikaku" 
+						requested_factories = 1
+						progress = 0.9
+						amount = 1
+					}
+				}
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_invest_in_battleships
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_formation_of_a_navy 
+		}
+		mutually_exclusive = { 
+			focus = AKI_invest_in_carriers
+		}
+		x = 3
+		y = 1
+		relative_position_id = AKI_formation_of_a_navy
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Battleship Focus"
+				bonus = 1.0
+				uses = 2
+				category = cat_fleet_in_being
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_floating_fortresses
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_invest_in_battleships 
+		}
+		x = 3
+		y = 2
+		relative_position_id = AKI_formation_of_a_navy
+		
+		cost = 10
+		
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Battleship Development"
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_yamato_class_battleships
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_floating_fortresses 
+		}
+		x = 3
+		y = 3
+		relative_position_id = AKI_formation_of_a_navy
+		
+		cost = 10
+		
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			if = {
+				limit = {
+					not = { has_dlc = "Man the Guns" }
+				}
+				if = {
+					limit = {
+						not = { has_tech = heavy_battleship }
+					}
+					set_technology = {
+						heavy_battleship = 1
+					}
+				}
+				custom_effect_tooltip = AKI_yamato_class_battleships_tt
+				hidden_effect = {
+					create_equipment_variant = {
+						name = "Yamato Class"
+						type = SH_battleship_1
+						parent_version = 0
+						upgrades = {
+							ship_reliability_upgrade = 2
+							ship_engine_upgrade = 3
+							ship_armor_upgrade = 1
+							ship_gun_upgrade = 1
+						}
+					}
+					add_equipment_production = {
+						equipment = {
+							type = SH_battleship_1
+							creator = "AKI" 
+							version_name = "Yamato Class"
+						}
+						name = "Shokaku" 
+						requested_factories = 1
+						progress = 0.9
+						amount = 1
+					}
+					add_equipment_production = {
+						equipment = {
+							type = SH_battleship_1
+							creator = "AKI" 
+							version_name = "Yamato Class"
+						}
+						name = "Musashi" 
+						requested_factories = 1
+						progress = 0.9
+						amount = 1
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						not = { has_tech = ship_hull_super_heavy }
+					}
+					set_technology = {
+						ship_hull_super_heavy = 1
+					}
+				}
+				custom_effect_tooltip = AKI_yamato_class_battleships_tt
+				hidden_effect = {
+					create_equipment_variant = {
+						name = "Yamato Class"
+						type = ship_hull_super_heavy_1
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_super_heavy_battery_1
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = heavy_ship_engine_2
+							fixed_ship_secondaries_slot = ship_secondaries_2
+							fixed_ship_armor_slot = ship_armor_shbb
+							front_1_custom_slot = ship_anti_air_1
+							front_2_custom_slot = empty
+							mid_1_custom_slot = empty
+							mid_2_custom_slot = ship_secondaries_2
+							mid_3_custom_slot = ship_secondaries_2
+							rear_1_custom_slot = ship_super_heavy_battery_1
+							rear_2_custom_slot = ship_airplane_launcher_1
+						}
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "AKI" 
+							version_name = "Yamato Class"
+						}
+						name = "Yamato" 
+						requested_factories = 1
+						progress = 0.9
+						amount = 1
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "AKI" 
+							version_name = "Yamato Class"
+						}
+						name = "Musashi" 
+						requested_factories = 1
+						progress = 0.9
+						amount = 1
+					}
+				}
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_convoy_production
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_invest_in_carriers
+			focus = AKI_invest_in_battleships
+		}
+		x = 0
+		y = 2
+		relative_position_id = AKI_formation_of_a_navy
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_timed_idea = {
+				idea = cheaper_convoys
+				days = 365
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_re_form_the_snlf
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_convoy_production
+		}
+		x = 0
+		y = 3
+		relative_position_id = AKI_formation_of_a_navy
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = "Marines Research"
+				bonus = 1.0
+				uses = 1
+				technology = marines
+				technology = marines2
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+## i can actually hide the focuses below using allow_branch ##
+	focus = {
+
+		id = AKI_shipgirls_discovery
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_shokaku_class_carriers
+			focus = AKI_yamato_class_battleships
+		}
+		prerequisite = { 
+			focus = AKI_re_form_the_snlf
+		}
+		x = 40
+		y = 4
+		
+		cost = 10
+
+# this magical thing here #
+#		allow_branch = {
+#			has_country_flag = AKI_shipgirls_discovered
+#		}
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			#add_tech_bonus for shipgirls maybe
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_favor_kancolle
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_shipgirls_discovery
+		}
+		mutually_exclusive = {
+			focus = AKI_favor_azur_lane
+		}
+		x = -2
+		y = 1
+		relative_position_id = AKI_shipgirls_discovery
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			#maybe kancolle ship designer company
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_favor_azur_lane
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_shipgirls_discovery
+		}
+		mutually_exclusive = {
+			focus = AKI_favor_kancolle
+		}
+		x = 2
+		y = 1
+		relative_position_id = AKI_shipgirls_discovery
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			#maybe azur lane ship designer company
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_shipgirl_commanders
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_favor_kancolle
+			focus = AKI_favor_azur_lane
+		}
+		x = 0
+		y = 2
+		relative_position_id = AKI_shipgirls_discovery
+		
+		cost = 10
+		
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			#adds in commanders depending on which game chosen
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_improved_shipbuilding
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_shipgirl_commanders
+		}
+		x = 0
+		y = 3
+		relative_position_id = AKI_shipgirls_discovery
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			#add_idea (boosts dockyard output)
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_the_new_dorm
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_favor_kancolle
+			focus = AKI_favor_azur_lane
+		}
+		x = -3
+		y = 2
+		relative_position_id = AKI_shipgirls_discovery
+		
+		cost = 10
+		
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			#does nothing but it sure would make the shipgirls happy!
+			custom_effect_tooltip = AKI_new_dorm_tt
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_oil_canteen
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_the_new_dorm
+		}
+		x = -3
+		y = 3
+		relative_position_id = AKI_shipgirls_discovery
+		
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		complete_tooltip = {
+			788 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	
+		completion_reward = {
+			if = {
+				limit = {
+					has_full_control_of_state = 788
+				}
+				788 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_open_the_academy
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_favor_kancolle
+			focus = AKI_favor_azur_lane
+		}
+		x = 3
+		y = 2
+		relative_position_id = AKI_shipgirls_discovery
+		
+		cost = 10
+
+		cancel_if_invalid = yes
+	
+		completion_reward = {
+			add_research_slot = 1
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
+	focus = {
+
+		id = AKI_tactic_classes
+		icon = GFX_unknown
+		prerequisite = { 
+			focus = AKI_open_the_academy
+		}
+		x = 3
+		y = 3
+		relative_position_id = AKI_shipgirls_discovery
+		
+		cost = 10
+
+		available_if_capitulated = yes
+	
+		completion_reward = {
+			#gives some traits to shipgirl commanders
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+
+	}
+
 }

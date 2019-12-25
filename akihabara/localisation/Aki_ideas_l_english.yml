@@ -57,3 +57,10 @@
  work_organization:0 "Organized Work Teams"
  fix_water:0 "Water supply restored"
  reconnect_power:0 "Power supply fixed"
+ 
+ quantity_over_quality:0 "Quantity Over Quality"
+ quality_over_quantity:0 "Quality Over Quantity"
+ adaptability:0 "Adaptability"
+ special_strike_forces:0 "Special Strike Forces"
+ cheaper_convoys:0 "Cheaper Convoys"
+ 
