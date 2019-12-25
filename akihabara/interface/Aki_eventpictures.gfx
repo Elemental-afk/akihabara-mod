@@ -4,5 +4,25 @@ spriteTypes = {
 		name = "GFX_report_event_first_contact"
 		texturefile = "gfx/event_pictures/report_event_first_contact.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_akihabara_market"
+		texturefile = "gfx/event_pictures/report_event_akihabara_market.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_hirohito_cartoon"
+		texturefile = "gfx/event_pictures/report_event_hirohito_cartoon.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_tarawa"
+		texturefile = "gfx/event_pictures/report_event_tarawa.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_tokyo_1"
+		texturefile = "gfx/event_pictures/report_event_tokyo_1.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_tokyo_2"
+		texturefile = "gfx/event_pictures/report_event_tokyo_2.dds"
+	}
 	
 }
