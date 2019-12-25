@@ -1,0 +1,12 @@
+
+
+graphical_culture = asian_gfx
+graphical_culture_2d = asian_2d
+
+color = {  209 46 193 }
+
+
+#neut:209 46 193
+#dem: 252 252 50  255 255 0
+#com: 255 130 130
+#fas: 188 0 45

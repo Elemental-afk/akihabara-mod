@@ -1,0 +1,21 @@
+
+AKI_congress_low_support_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = AKI_congress_low_support_trigger_tt
+		check_variable = { var = senators_support value = quorum_low compare = greater_than_or_equals }
+	}
+}
+
+AKI_congress_medium_support_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = AKI_congress_medium_support_trigger_tt
+		check_variable = { var = senators_support value = quorum_medium compare = greater_than_or_equals }
+	}
+}
+
+AKI_congress_high_support_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = AKI_congress_high_support_trigger_tt
+		check_variable = { var = senators_support value = quorum_high compare = greater_than_or_equals }
+	}
+}

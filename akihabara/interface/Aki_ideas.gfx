@@ -1,0 +1,30 @@
+spriteTypes = {	
+    ##New akihabara icons##
+	
+	spriteType = {
+		name = "GFX_idea_aki_army_problems"
+		texturefile = "gfx/interface/ideas/idea_aki_army_problems.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_birthplace_of_anime"
+		texturefile = "gfx/interface/ideas/idea_birthplace_of_anime.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_industry_burning"
+		texturefile = "gfx/interface/ideas/idea_industry_burning.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_manpower_crisis"
+		texturefile = "gfx/interface/ideas/idea_manpower_crisis.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_otaku_low"
+		texturefile = "gfx/interface/ideas/idea_otaku_low.dds"
+	}
+	
+}	
+	

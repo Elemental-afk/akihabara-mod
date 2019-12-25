@@ -1,0 +1,596 @@
+ideas = {
+    country = {
+		birthplace_of_anime = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = idea_birthplace_of_anime
+			
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+
+###INDUSTRY GANG
+		the_shock = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = industry_burning
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.5
+				political_power_gain = -1
+				stability_factor = -0.35
+				war_support_factor = -0.2
+				industrial_capacity_factory = -0.5
+				line_change_production_efficiency_factor = -1.0
+				production_speed_buildings_factor = -0.5
+				research_speed_factor = -0.75
+			}
+			
+		}
+		the_shock_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = industry_burning
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.5
+				political_power_gain = -1
+				stability_factor = -0.25
+				war_support_factor = -0.2
+				industrial_capacity_factory = -0.35
+				line_change_production_efficiency_factor = -0.7
+				production_speed_buildings_factor = -0.35
+				research_speed_factor = -0.75
+			}
+			
+		}
+
+		decentralization = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = industry_burning
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		decentralization_1 = { #local Businesses
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = industry_burning
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				line_change_production_efficiency_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				global_building_slots_factor = 0.20
+				industrial_capacity_factory = -0.1
+				political_power_cost = 0.15
+			}
+		}
+		decentralization_2 = { #no public, workers rights
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = industry_burning
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+				line_change_production_efficiency_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				global_building_slots_factor = 0.20
+				industrial_capacity_factory = -0.1
+				political_power_cost = 0.15
+			}
+		}
+		decentralization_3 = { #public companies, direct from decentralization
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = industry_burning
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.3
+				industrial_capacity_factory = -0.1
+			}
+		}
+		decentralization_4 = { #public companies + Local businesses
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = industry_burning
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.3
+				industrial_capacity_factory = -0.1
+				line_change_production_efficiency_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				global_building_slots_factor = 0.20
+				political_power_cost = 0.15
+			}
+		}
+		decentralization_5 = { #DasFinale
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = industry_burning
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_buildings_factor = 0.3
+				industrial_capacity_factory = -0.1
+				line_change_production_efficiency_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				global_building_slots_factor = 0.20
+				political_power_cost = 0.15
+			}
+		}
+		decentralization_6 = { #DasFinale + Non Discrim
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = industry_burning
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_buildings_factor = 0.3
+				industrial_capacity_factory = -0.05
+				line_change_production_efficiency_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				global_building_slots_factor = 0.20
+				political_power_cost = 0.15
+			}
+		}
+		decentralization_7 = { #DasFinale + no anime at work
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = industry_burning
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+				production_speed_buildings_factor = 0.3
+				industrial_capacity_factory = -0.1
+				line_change_production_efficiency_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				global_building_slots_factor = 0.20
+				political_power_cost = 0.15
+				conscription_factor = 0.1	
+			}
+		}
+		centralization = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+	
+			picture = industry_burning
+			
+			modifier = {
+				consumer_goods_factor = 0.05	
+			}
+		}
+		centralization_1 = {  #Big Corp only
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+	
+			picture = industry_burning
+			
+			modifier = {
+				global_building_slots_factor = -0.10
+				consumer_goods_factor = 0.05
+				political_power_cost = 0.15
+				industrial_capacity_factory = 0.2
+			}
+		}
+		centralization_2 = { #Big corp + the salaryman
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+	
+			picture = industry_burning
+			
+			modifier = {
+				global_building_slots_factor = -0.10
+				consumer_goods_factor = 0.05
+				political_power_cost = 0.15
+				industrial_capacity_factory = 0.3
+				production_factory_max_efficiency_factor = 0.2
+				line_change_production_efficiency_factor = -0.3
+				stability_factor = -0.1
+			}
+		}
+		centralization_3 = { #free market
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+	
+			picture = industry_burning
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_cost = -0.15
+			}
+		}
+		centralization_4 = { #Free market + big corp
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+	
+			picture = industry_burning
+			
+			modifier = {
+				global_building_slots_factor = -0.10
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.2
+			}
+		}
+		centralization_5 = { # DAS FINALE
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+	
+			picture = industry_burning
+			
+			modifier = {
+				global_building_slots_factor = -0.10
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.3
+				production_factory_max_efficiency_factor = 0.2
+				line_change_production_efficiency_factor = -0.3
+				stability_factor = -0.1
+			}
+		}
+		centralization_6 = { # DAS FINALE + Non-discrim
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+	
+			picture = industry_burning
+			
+			modifier = {
+				global_building_slots_factor = -0.10
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.35
+				production_factory_max_efficiency_factor = 0.2
+				line_change_production_efficiency_factor = -0.3
+				stability_factor = -0.1
+			}
+		}
+		centralization_7 = { # DAS FINALE + Anime at Work
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+	
+			picture = industry_burning
+			
+			modifier = {
+				global_building_slots_factor = -0.10
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.3
+				production_factory_max_efficiency_factor = 0.2
+				line_change_production_efficiency_factor = -0.3
+				stability_factor = -0.1
+				conscription_factor = 0.1
+			}
+		}
+		Workers_rights = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_weekly = 0.003					
+			}
+		}
+##REPAIRS HERE
+		repair_teams = {
+			picture = ger_rebuild_the_nation
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industry_repair_factor = 0.5
+				industry_free_repair_factor = 1.0					
+			}
+		}
+		reconnect_power = {
+			picture = ger_rebuild_the_nation
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.2
+				line_change_production_efficiency_factor = 0.10
+				production_speed_buildings_factor = 0.2
+			}
+		}
+		fix_water = {
+			picture = ger_rebuild_the_nation
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				MONTHLY_POPULATION = 0.25
+				political_power_gain = 0.15
+				stability_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+		work_organization = {
+			picture = ger_rebuild_the_nation
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_gain = 0.15
+				line_change_production_efficiency_factor = 0.20
+			}
+		}
+		recovering_from_anomaly = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = industry_burning
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.25
+				political_power_gain = -0.7
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				industrial_capacity_factory = -0.15
+				line_change_production_efficiency_factor = -0.5
+				production_speed_buildings_factor = -0.15
+				research_speed_factor = -0.75
+			}
+			
+		}
+		recovering_from_anomaly_1 = { #research
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = industry_burning
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.25
+				political_power_gain = -0.7
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				industrial_capacity_factory = -0.15
+				line_change_production_efficiency_factor = -0.5
+				production_speed_buildings_factor = -0.15
+				research_speed_factor = -0.5
+			}
+			
+		}
+### NON-INDUSTRY
+		demographic_crisis = { #only beta males in akihabara - no sex 
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = otaku_low
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.9
+				
+			}
+			
+		}
+		
+		manpower_crisis = { #only 70k people in akiba, most of them are tourists
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = manpower_crisis
+			
+			modifier = {
+				conscription_factor = -0.5
+				training_time_factor = 0.3
+				war_support_factor =  -0.2
+			}
+		}
+		
+		no_military_experience = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = aki_army_problems
+			
+			modifier = {
+				planning_speed = -0.5
+				max_planning = -0.7
+				army_morale_factor = -0.2
+				command_power_gain = -0.5
+				
+			}
+		}
+		
+	
+	
+	}
+	
+	
+}

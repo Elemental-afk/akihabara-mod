@@ -1,0 +1,26 @@
+################
+##### AKI ######
+################
+
+AKI_bureau_of_development = {
+	
+	allowed = {
+		original_tag = AKI
+	}
+	visible = {
+		has_completed_focus = AKI_bureau_of_development
+	}
+}
+AKI_congress = {
+	icon = usa_congress
+	allowed = {
+		original_tag = AKI
+	}
+
+	visible = {
+		has_completed_focus = AKI_create_senate
+	}
+	scripted_gui = aki_congress_decision_ui	
+
+	priority = 85
+}

@@ -1,0 +1,8 @@
+spriteTypes = {
+### Akihabara Sprites	
+	spriteType = {
+		name = "GFX_report_event_first_contact"
+		texturefile = "gfx/event_pictures/report_event_first_contact.dds"
+	}
+	
+}

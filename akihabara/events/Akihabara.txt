@@ -1,0 +1,592 @@
+﻿###########################
+# Akihabara Events
+###########################
+
+add_namespace = akihabara
+
+# First contact
+country_event = {
+	id = akihabara.1
+	title = akihabara.1.t
+	desc = akihabara.1.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # We are from the future
+		name = akihabara.1.a
+		
+	}
+	
+	option = { # But who are you?
+		name = akihabara.1.b
+		
+	}
+	
+	option = { # We come from an outer world
+		name = akihabara.1.c
+		
+	}
+	
+	option = { # Cease to exist or we will beat your asses
+		name = akihabara.1.e
+		
+	}
+}
+
+#Integrate Railways 
+country_event = {
+	id = akihabara.2
+	title = akihabara.2.t
+	desc = akihabara.2.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # Decentralization
+		name = akihabara.2.a
+		
+	}
+	
+	option = { # Centralization
+		name = akihabara.2.b
+		
+	}
+}
+
+#Decentralization Event
+country_event = {
+	id = akihabara.3
+	title = akihabara.3.t
+	desc = akihabara.3.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # Free Real Estate
+		name = akihabara.3.a
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+
+#Centralization Event
+country_event = {
+	id = akihabara.4
+	title = akihabara.4.t
+	desc = akihabara.4.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # Free Real Estate
+		name = akihabara.4.a
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+					}
+				}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+
+
+#colonization Event
+country_event = {
+	id = akihabara.5
+	title = akihabara.5.t
+	desc = akihabara.5.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # Korea
+		trigger = {
+			AND = {has_full_control_of_state = 525
+			has_full_control_of_state = 527}
+		}
+		name = akihabara.5.a
+		525 = {
+			if = {
+				limit = { is_controlled_by = ROOT }
+				add_manpower = 52500
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+		527 = {
+			if = {
+				limit = { is_controlled_by = ROOT }
+				add_manpower = 52500
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	option = { # Manchuria
+		trigger = {
+			AND = {
+				has_full_control_of_state = 716
+				has_full_control_of_state = 328
+				has_full_control_of_state = 717
+				has_full_control_of_state = 714
+				has_full_control_of_state = 761
+				has_full_control_of_state = 715
+				has_full_control_of_state = 745
+				has_full_control_of_state = 610 }
+		}
+		name = akihabara.5.b
+			716 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_manpower = 15000
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			328 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_manpower = 15000
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			717 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_manpower = 15000
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			714 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_manpower = 15000
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			761 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_manpower = 15000
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			715 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_manpower = 15000
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			745 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_manpower = 15000
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			610 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_manpower = 15000
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+	}
+}
+
+#Ding Dong Your Focus is Wrong Event
+country_event = {
+	id = akihabara.6
+	title = akihabara.6.t
+	desc = akihabara.6.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # oof ouch owie
+		name = akihabara.6.a
+		add_political_power = -100
+	}
+}
+
+
+#Recovery from Anomaly
+country_event = {
+	id = akihabara.7
+	title = akihabara.7.t
+	desc = akihabara.7.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # RECOVERY
+		name = akihabara.7.a
+		add_political_power = 50
+		swap_ideas = {
+			remove_idea = the_shock_1
+			add_idea = recovering_from_anomaly
+		}
+		remove_ideas = fix_water
+		remove_ideas = reconnect_power
+		remove_ideas = work_organization
+	}
+
+}	
+###STARTING EVENTS###
+	
+#The lore, at the start
+
+	country_event = {
+	id = akihabara.8
+	title = akihabara.8.t
+	desc = akihabara.8.d
+	picture =  GFX_report_event_first_contact
+	
+	trigger = {
+		country_exists = AKI
+	}
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = { # ok retard thanks for lore
+		name = akihabara.8.a
+		country_event = {
+        id = akihabara.1
+        days = 5
+      }
+	}
+	
+}
+
+#Mutual talks after asking them 
+country_event = {
+	id = akihabara.9
+	title = akihabara.9.t
+	desc = akihabara.9.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # Give them our goods then!
+		name = akihabara.9.a
+		
+	}
+	
+}
+
+#prove that you are from an other planet (always fails)
+country_event = {
+	id = akihabara.10
+	title = akihabara.10.t
+	desc = akihabara.10.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # Show them uhh, sci fi mangas?
+		name = akihabara.10.a
+		
+		hidden_effect = {
+		country_event = {
+        id = akihabara.10
+        days = 5
+      }
+        }
+	}
+	
+	option = { # Show them our weapons
+		name = akihabara.10.b
+		
+		hidden_effect = {
+        country_event = {
+        id = akihabara.10
+        days = 5
+      }
+      }
+	}
+	
+	option = { # Show them our technology
+		name = akihabara.10.c
+		
+		hidden_effect = {
+        country_event = {
+        id = akihabara.12
+        days = 5
+      }
+     }
+	}
+	
+
+}
+
+#prove that you are from the future (few options)
+country_event = {
+	id = akihabara.11
+	title = akihabara.11t
+	desc = akihabara.11.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # high effort showcase
+		name = akihabara.11.a
+		add_political_power = -100
+		hidden_effect = {
+		country_event = {
+        id = akihabara.12
+        days = 5
+      }
+        }
+	}
+	
+	option = { # medium effort showcase
+		name = akihabara.11.b
+		add_political_power = -50
+		hidden_effect = {
+        country_event = {
+        id = akihabara.12
+        days = 5
+      }
+      }
+	}
+	
+	option = { # low effort showcase
+		name = akihabara.11.c
+		add_political_power = -25
+		hidden_effect = {
+        country_event = {
+        id = akihabara.12
+        days = 5
+      }
+     }
+	}
+}
+
+#they are scared of us, japanese will attack 
+country_event = {
+	id = akihabara.12
+	title = akihabara.12.t
+	desc = akihabara.12.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # Well, lets wait for it 
+		name = akihabara.12.a
+		
+	}
+	option = { # Attack first!
+		name = akihabara.12.a
+		
+	}
+	
+
+}
+
+#higher interest in akihabara
+country_event = {
+	id = akihabara.13
+	title = akihabara.13.t
+	desc = akihabara.13.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # I mean, why not?
+		name = akihabara.13.a
+		add_political_power = -50
+	    hidden_effect = {
+        country_event = {
+        id = akihabara.14
+        days = 5
+      }
+      }
+	}
+	
+	
+}
+
+#Emperor plans his visit to Akihabara
+country_event = {
+	id = akihabara.14
+	title = akihabara.14.t
+	desc = akihabara.14.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # A huge honour, announce this!
+		name = akihabara.14.a
+		add_political_power = +50
+	    hidden_effect = {
+        country_event = {
+        id = akihabara.15
+        days = 5
+      }
+      }
+	}
+	
+	
+}
+
+#Emperor captured AAAAAAAAAAAAAAAAAA!
+country_event = {
+	id = akihabara.15
+	title = akihabara.15.t
+	desc = akihabara.15.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # oh god oh fuck
+		name = akihabara.15.a
+		#war with japan soon...
+      }
+      }
+	}
+	
+	
+}
+
+#Military squad dispatches to Akihabara
+country_event = {
+	id = akihabara.16
+	title = akihabara.16.t
+	desc = akihabara.16.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # Try to trap them, somehow?
+		name = akihabara.14.a    
+	    hidden_effect = {
+        country_event = {
+        id = akihabara.17
+        days = 5
+      }
+      }
+	}
+	
+	option = { # Attack them!
+		name = akihabara.14.a    
+	    hidden_effect = {
+        country_event = {
+        id = akihabara.18
+        days = 5
+      }
+      }
+	}
+	
+	
+}
+
+country_event = {
+	id = akihabara.17
+	title = akihabara.17.t
+	desc = akihabara.17.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # Hold them hostage
+		name = akihabara.17.a
+		
+	}
+	
+	option = { # Cnvince them to join us with tech
+		name = akihabara.17.a
+		
+	}
+	
+	
+}
+
+country_event = {
+	id = akihabara.18
+	title = akihabara.18.t
+	desc = akihabara.18.d
+	picture =  GFX_report_event_first_contact
+	
+	is_triggered_only = yes
+	
+	option = { # Banzai on these japanese
+		name = akihabara.18.a
+		
+	}
+	
+	
+}
+
+

@@ -1,0 +1,1523 @@
+focus_tree = {
+	id = akihabara_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = AKI
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = AKI_rail_station
+		icon = GFX_goal_generic_construction
+		x = 4
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		available = {
+				has_full_control_of_state = 788
+		}
+		
+		completion_reward = {
+			788 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						set_building_level = {
+							type = infrastructure
+							level = 10
+							instant_build = yes
+						}
+					}
+				}
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_integrate_railways
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_rail_station }
+		x = 4
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = the_shock
+				add_idea = the_shock_1
+			}
+			hidden_effect = {
+				country_event = { id = akihabara.2 days = 30}
+				if={
+					limit = {
+						AND{
+							has_idea = fix_water
+							has_idea = reconnect_power
+							has_idea = work_organization
+						}
+					}
+					country_event = { id = akihabara.7 days = 45}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_decentralization
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_integrate_railways }
+		mutually_exclusive = { focus = AKI_centralization }
+		x = 1
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			add_ideas = decentralization
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 5
+				technology = dispersed_industry
+				technology = dispersed_industry2
+				technology = dispersed_industry3
+				technology = dispersed_industry4
+				technology = dispersed_industry5
+			}
+			hidden_effect = {
+				country_event = { id = akihabara.3 days = 100}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_local_business
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_decentralization }
+		x = 0
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			if = {                      #directly from decentralization
+				limit = {
+					has_idea = decentralization
+				}
+				swap_ideas = {
+					remove_idea = decentralization
+					add_idea = decentralization_1
+				}
+			}
+
+			else_if = {                      #after public companies
+				limit = {
+					has_idea = decentralization_3
+				}
+				swap_ideas = {
+					remove_idea = decentralization_3
+					add_idea = decentralization_4
+				}
+			}
+			else = {              # this is only to show off the effects
+				swap_ideas = {
+					remove_idea = decentralization
+					add_idea = decentralization_1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AKI_workers_rights
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_local_business }
+		x = 0
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = Workers_rights
+				days = 365
+			}
+			if = {                      #directly from local businesses
+				limit = {
+					has_idea = decentralization_1
+				}
+				swap_ideas = {
+					remove_idea = decentralization_1
+					add_idea = decentralization_2
+				}
+			}
+			else_if = {                      #after public companies
+				limit = {
+					has_idea = decentralization_4
+				}
+				swap_ideas = {
+					remove_idea = decentralization_4
+					add_idea = decentralization_5
+				}
+			}
+			else = {              # this is only to show off the effects
+				swap_ideas = {
+					remove_idea = decentralization_1
+					add_idea = decentralization_2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_public_companies
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_decentralization }
+		x = 2
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			add_political_power = -100
+			if = {                      #directly from decentralization
+				limit = {
+					has_idea = decentralization
+				}
+				swap_ideas = {
+					remove_idea = decentralization
+					add_idea = decentralization_3
+				}
+			}
+			else_if = {                      #from local businesses
+				limit = {
+					has_idea = decentralization_1
+				}
+				swap_ideas = {
+					remove_idea = decentralization_1
+					add_idea = decentralization_4
+				}
+			}
+			else_if = {                      #from workers rights
+				limit = {
+					has_idea = decentralization_2
+				}
+				swap_ideas = {
+					remove_idea = decentralization_2
+					add_idea = decentralization_5
+				}
+			}
+			else = {              # this is only to show off the effects
+				swap_ideas = {
+					remove_idea = decentralization
+					add_idea = decentralization_3
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_non_discriminatory_workplaces
+		icon = GFX_unknown
+		 prerequisite = { focus = AKI_public_companies  focus = AKI_free_market  }
+		 prerequisite = { focus = AKI_workers_rights  focus = AKI_the_salaryman  }
+			  
+		mutually_exclusive = { focus = AKI_no_anime_at_work }
+		x = 2
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			if = {                      #from decentralization
+				limit = {
+					has_idea = decentralization_5
+				}
+				swap_ideas = {
+					remove_idea = decentralization_5
+					add_idea = decentralization_6
+				}
+			}
+			else_if = {                      #from centralization
+				limit = {
+					has_idea = centralization_5
+				}
+				swap_ideas = {
+					remove_idea = centralization_5
+					add_idea = centralization_6
+				}
+				hidden_effect = {
+					country_event = { id = akihabara.6 days = 30}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_centralization
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_integrate_railways }
+		mutually_exclusive = { focus = AKI_decentralization }
+		x = 7
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			add_ideas = centralization
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 5
+				technology = concentrated_industry
+				technology = concentrated_industry2
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+			}
+			hidden_effect = {
+				country_event = { id = akihabara.4 days = 100}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_free_market
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_centralization }
+		x = 6
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			add_political_power = 75
+			if = {
+				limit = {	has_idea = closed_economy}
+				add_ideas = limited_exports
+			}
+			if = {
+				limit = {	has_idea = limited_exports}
+				add_ideas = export_focus
+			}
+			if = {
+				limit = {	has_idea = export_focus}
+				add_ideas = free_trade
+			}
+			hidden_effect = {
+				set_country_flag = stop_having_it_be_closed
+			}
+			
+			if = {                      #directly from centralization
+				limit = {
+					has_idea = centralization
+				}
+				swap_ideas = {
+					remove_idea = centralization
+					add_idea = centralization_3
+				}
+			}
+			else_if = {                      #from big corp
+				limit = {
+					has_idea = centralization_1
+				}
+				swap_ideas = {
+					remove_idea = centralization_1
+					add_idea = centralization_4
+				}
+			}
+			else_if = {                      #from the salaryman
+				limit = {
+					has_idea = centralization_2
+				}
+				swap_ideas = {
+					remove_idea = centralization_2
+					add_idea = centralization_5
+				}
+			}
+			else = {              # this is only to show off the effects
+				swap_ideas = {
+					remove_idea = centralization
+					add_idea = centralization_3
+				}
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_big_corporations
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_centralization }
+		x = 8
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					AND = {
+						NOT = { state = 788 }
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					AND = {
+						NOT = { state = 788 }
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {                      #directly from centralization
+				limit = {
+					has_idea = centralization
+				}
+				swap_ideas = {
+					remove_idea = centralization
+					add_idea = centralization_1
+				}
+			}
+			else_if = {                      #after free market
+				limit = {
+					has_idea = centralization_3
+				}
+				swap_ideas = {
+					remove_idea = centralization_3
+					add_idea = centralization_5
+				}
+			}
+			else = {              # this is only to show off the effects
+				swap_ideas = {
+					remove_idea = centralization
+					add_idea = centralization_1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_the_salaryman
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_big_corporations }
+		x = 8
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			if = {                      #directly from big corporations
+				limit = {
+					has_idea = centralization_1
+				}
+				swap_ideas = {
+					remove_idea = centralization_1
+					add_idea = centralization_2
+				}
+			}
+			else_if = {                      #after free market
+				limit = {
+					has_idea = centralization_4
+				}
+				swap_ideas = {
+					remove_idea = centralization_4
+					add_idea = centralization_5
+				}
+			}
+			else = {              # this is only to show off the effects
+				swap_ideas = {
+					remove_idea = centralization_1
+					add_idea = centralization_2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_no_anime_at_work
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_public_companies  focus = AKI_free_market  }
+		prerequisite = { focus = AKI_workers_rights  focus = AKI_the_salaryman  }
+		mutually_exclusive = { focus = AKI_non_discriminatory_workplaces }   
+		x = 6
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			add_political_power = -50
+			if = {                      #from decentralization
+				limit = {
+					has_idea = decentralization_5
+				}
+				swap_ideas = {
+					remove_idea = decentralization_5
+					add_idea = decentralization_7
+				}
+				hidden_effect = {
+					country_event = { id = akihabara.6 days = 30}
+				}
+			}
+			else_if = {                 #from centralization
+				limit = {
+					has_idea = centralization_5
+				}
+				swap_ideas = {
+					remove_idea = centralization_5
+					add_idea = centralization_7
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_bureau_of_development
+		icon = GFX_unknown
+		x = 4
+		y = 6
+		cost = 10
+		prerequisite = { focus = AKI_no_anime_at_work focus = AKI_non_discriminatory_workplaces }
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = AKI_bureau_of_development_tt
+			unlock_decision_tooltip = AKI_Expand_Civilian_Industry
+			unlock_decision_tooltip = AKI_Expand_Military_Industry
+		}
+	}
+	
+	focus = {
+		id = AKI_colonial_infrastructure
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_centralization focus = AKI_decentralization }
+		x = 4
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		available = {
+			OR = {
+				AND = {has_full_control_of_state = 525
+					has_full_control_of_state = 527 }
+				AND = {
+				has_full_control_of_state = 716
+				has_full_control_of_state = 328
+				has_full_control_of_state = 717
+				has_full_control_of_state = 714
+				has_full_control_of_state = 761
+				has_full_control_of_state = 715
+				has_full_control_of_state = 745
+				has_full_control_of_state = 610 }
+			}
+		}
+		completion_reward = {
+			525 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			527 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			716 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			328 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			717 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			714 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			761 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			715 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			745 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			610 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_colonial_development
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_colonial_infrastructure }
+		x = 4
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		available = {
+			OR = {
+				AND = {has_full_control_of_state = 525
+					has_full_control_of_state = 527 }
+				AND = {
+				has_full_control_of_state = 716
+				has_full_control_of_state = 328
+				has_full_control_of_state = 717
+				has_full_control_of_state = 714
+				has_full_control_of_state = 761
+				has_full_control_of_state = 715
+				has_full_control_of_state = 745
+				has_full_control_of_state = 610 }
+			}
+		}
+		completion_reward = {
+			country_event = { id = akihabara.5 }
+		}
+	}
+	
+	focus = {
+		id = AKI_repairment_teams
+		icon = GFX_goal_generic_production
+		x = 12
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = repair_teams
+				days = 365
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_reconnect_the_power
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_repairment_teams }
+		x = 10
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			add_ideas = reconnect_power
+			if={
+				limit = {
+					AND{
+						has_idea = fix_water
+						has_idea = work_organization
+						has_idea = the_shock_1
+					}
+				}
+				country_event = { id = akihabara.7 days = 45}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_fix_the_water
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_repairment_teams }
+		x = 12
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			add_ideas = fix_water
+			hidden_effect = {
+				if={
+					limit = {
+						AND{
+							has_idea = work_organization
+							has_idea = reconnect_power
+							has_idea = the_shock_1
+						}
+					}
+					country_event = { id = akihabara.7 days = 45}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_work_organization
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_repairment_teams }
+		prerequisite = { focus = AKI_create_senate }
+		x = 14
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			add_ideas = work_organization
+			hidden_effect = {
+				if={
+					limit = {
+						AND{
+							has_idea = fix_water
+							has_idea = reconnect_power
+							has_idea = the_shock_1
+						}
+					}
+					country_event = { id = akihabara.7 days = 45}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_connect_radios
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = AKI_integrate_railways }
+		prerequisite = { focus = AKI_reconnect_the_power }
+		x = 10
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = encryption_tech
+				category = decryption_tech
+				category = computing_tech
+				category = radar_tech 
+			}
+			swap_ideas = {
+				remove_idea = recovering_from_anomaly
+				add_idea = recovering_from_anomaly_1
+			}
+			788 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = radar_station
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = AKI_the_incident
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_integrate_railways}
+		prerequisite = { focus = AKI_reconnect_the_power }
+		x = 12
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_recover_technology
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_connect_radios }
+		prerequisite = { focus = AKI_the_incident }
+		x = 11
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_anime_studios
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_the_incident }
+		x = 13
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_university_of_future
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_recover_technology }
+		prerequisite = { focus = AKI_anime_studios }
+		x = 12
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+    focus = {
+		id = AKI_create_senate
+		icon = GFX_unknown
+		x = 17
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_stabilize
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_create_senate }
+		x = 16
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_jsfds_found
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_create_senate }
+		x = 18
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_form_militias
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_stabilize }
+		prerequisite = { focus = AKI_jsfds_found }
+		x = 15
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_battle_of_tokyo
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_stabilize }
+		prerequisite = { focus = AKI_jsfds_found }
+		x = 17
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_japan_is_ours
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_battle_of_tokyo }
+		x = 17
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_move_capital
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_japan_is_ours }
+		x = 14
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_korean_traitors
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_japan_is_ours }
+		x = 16
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_imprison_emperor
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_japan_is_ours }
+		mutually_exclusive = { focus = AKI_kill_emperor }
+		x = 18
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_kill_emperor
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_japan_is_ours }
+		mutually_exclusive = { focus = AKI_imprison_emperor }
+		x = 20
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_economy_question
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_move_capital }
+		prerequisite = { focus = AKI_korean_traitors }
+		x = 15
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_military_question
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_korean_traitors }
+		prerequisite = { focus = AKI_imprison_emperor focus = AKI_kill_emperor  }
+		x = 17
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_fate_of_shintoism
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_imprison_emperor focus = AKI_kill_emperor }
+        x = 19
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_first_international_convent
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_economy_question }
+        prerequisite = { focus = AKI_military_question }
+		prerequisite = { focus = AKI_fate_of_shintoism }
+		mutually_exclusive = { focus = AKI_power_through_secrets }
+		x = 13
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_power_through_secrets
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_economy_question }
+        prerequisite = { focus = AKI_military_question }
+		prerequisite = { focus = AKI_fate_of_shintoism }
+		mutually_exclusive = { focus = AKI_first_international_convent }
+		x = 21
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_communism
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_first_international_convent }
+		mutually_exclusive = { focus = AKI_democracy }
+		mutually_exclusive = { focus = AKI_fascism }
+		x = 9
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_democracy
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_first_international_convent focus = AKI_power_through_secrets }
+		mutually_exclusive = { focus = AKI_communism }
+		mutually_exclusive = { focus = AKI_fascism }
+		x = 17
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_fascism
+		icon = GFX_unknown
+		prerequisite = { focus = AKI_power_through_secrets }
+		mutually_exclusive = { focus = AKI_communism }
+		mutually_exclusive = { focus = AKI_democracy }
+		x = 25
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_formation_of_an_army
+		icon = GFX_unknown
+		x = 29
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_the_man_in_army
+		prerequisite = { focus = AKI_formation_of_an_army }
+		mutually_exclusive = { focus = AKI_the_rifle_in_army }
+		icon = GFX_unknown
+		x = 27
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_the_rifle_in_army
+		prerequisite = { focus = AKI_formation_of_an_army }
+		mutually_exclusive = { focus = AKI_the_man_in_army }
+		icon = GFX_unknown
+		x = 31
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_anime_conscripts
+		prerequisite = { focus = AKI_the_man_in_army focus = AKI_the_rifle_in_army }
+		icon = GFX_unknown
+		x = 29
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_school_uniforms
+		prerequisite = { focus = AKI_anime_conscripts }
+		mutually_exclusive = { focus = AKI_modern_camo }
+		icon = GFX_unknown
+		x = 28
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_modern_camo
+		prerequisite = { focus = AKI_anime_conscripts }
+		mutually_exclusive = { focus = AKI_school_uniforms }
+		icon = GFX_unknown
+		x = 30
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_waifu_warpainting
+		prerequisite = { focus = AKI_school_uniforms focus = AKI_modern_camo }
+		mutually_exclusive = { focus = AKI_modern_vehicles }
+		icon = GFX_unknown
+		x = 28
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_modern_vehicles
+		prerequisite = { focus = AKI_school_uniforms focus = AKI_modern_camo }
+		mutually_exclusive = { focus = AKI_waifu_warpainting }
+		icon = GFX_unknown
+		x = 30
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_man_1
+		prerequisite = { focus = AKI_the_man_in_army }
+		icon = GFX_unknown
+		x = 27
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_man_2
+		prerequisite = { focus = AKI_man_1 }
+		icon = GFX_unknown
+		x = 26
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_man_3
+		prerequisite = { focus = AKI_man_2 }
+		icon = GFX_unknown
+		x = 26
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_man_4
+		prerequisite = { focus = AKI_man_3 }
+		icon = GFX_unknown
+		x = 26
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_rifle_1
+		prerequisite = { focus = AKI_the_rifle_in_army }
+		icon = GFX_unknown
+		x = 31
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_rifle_2
+		prerequisite = { focus = AKI_rifle_1 }
+		icon = GFX_unknown
+		x = 32
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_rifle_3
+		prerequisite = { focus = AKI_rifle_2 }
+		icon = GFX_unknown
+		x = 32
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_rifle_4
+		prerequisite = { focus = AKI_rifle_3 }
+		icon = GFX_unknown
+		x = 32
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_special_forces_academy
+		prerequisite = { focus = AKI_rifle_4 focus = AKI_man_4 }
+		prerequisite = { focus = AKI_waifu_warpainting focus = AKI_modern_vehicles }
+		icon = GFX_unknown
+		x = 29
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = AKI_superweapon
+		prerequisite = { focus = AKI_special_forces_academy }
+		icon = GFX_unknown
+		x = 29
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = #tbd 
+		}
+		
+		completion_reward = {
+			
+		}
+	}
+	
+	
+	
+	
+
+	
+	
+	
+}
