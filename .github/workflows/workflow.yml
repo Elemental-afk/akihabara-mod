@@ -69,7 +69,7 @@ jobs:
         
         modPath: "akihabara"
         
-        locLanguages: "english russian" # change this to what localisation languages your mod supports 
+        locLanguages: "english" # change this to what localisation languages your mod supports 
 
       env:
 
