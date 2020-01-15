@@ -477,7 +477,7 @@ CSA = {
 }
 AKI = {
 	color = rgb { 188 0 45 }
-	color_ui = rgb { 188 0 45 }
+	color_ui = rgb { 218 30 85 }
 }
 D01 = {
 	color = rgb { 200 100 31 }
