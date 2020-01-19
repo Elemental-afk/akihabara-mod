@@ -1,33 +1,212 @@
 ﻿l_english:
- akihabara.1.t:0 "First Contact"
- akihabara.1.d:0 "Even though only a few days have passed since we have been apparently transported into the twentieth century our appearance has already caused a lot of concern of the Tokyoite Japanese. They obviously noticed the humongous buildings and modern technology that we have carried along with us. A squad of masked Japanese scouts has arrived in order to discover what are we, and what are our intents. How should we anwser to their questions?"
- akihabara.1.a:0 "You might not believe, but we come from the future..."
- akihabara.1.b:0 "We could ask you the same question."
- akihabara.1.c:0 "We are exterrestial beings, coming from the outer space."
- akihabara.1.e:0 "No trespassing into our terrain, intruders. We will not repeat ourselves."
+
+akihabara.1.t:0 "Take Stock"
+akihabara.1.d:0 "(Some Background Info)\n\nA temporary government has been formed shortly after the incident to address these issues. We must also make haste with reorganizing what remains of the JSDF transported alongside with us as well."
+akihabara.1.a:0 "I see."
+
+akihabara.2.t:0 "The First Senate Meeting"
+akihabara.2.d:0 "The Council of 100 was formed almost immediately after the incident. Comprised of multiple factions, each withe their own goals and interests, the Council is united solely due to blabla."
+akihabara.2.a:0 "Brief me on the Japanese Otaku Community."
+akihabara.2.b:0 "Brief me on the Tokyo Conservative Citizen Council."
+akihabara.2.c:0 "Brief me on the Foreign Investors Board."
+akihabara.2.d1:0 "Brief me on the Foreign Otaku Community."
+akihabara.2.e:0 "Brief me on the JSDF Operation Staff."
+akihabara.2.f:0 "Brief me on the Writers Association."
+akihabara.2.g:0 "Brief me on the Imperial Protection Association."
+akihabara.2.h:0 "I'm done with the briefing."
+
+akihabara.3.t:0 "The Japanese Otaku Community"
+akihabara.3.d:0 ""
+akihabara.3.a:0 "I see."
+
+akihabara.4.t:0 "The Tokyo Conservative Citizen Council"
+akihabara.4.d:0 ""
+akihabara.4.a:0 "I see."
+
+akihabara.5.t:0 "The Foreign Investors Board"
+akihabara.5.d:0 ""
+akihabara.5.a:0 "I see."
+
+akihabara.6.t:0 "The Foreign Otaku Community"
+akihabara.6.d:0 ""
+akihabara.6.a:0 "I see."
+
+akihabara.7.t:0 "The JSDF Operation Staff"
+akihabara.7.d:0 ""
+akihabara.7.a:0 "I see."
+
+akihabara.8.t:0 "The Writers Association"
+akihabara.8.d:0 ""
+akihabara.8.a:0 "I see."
+
+akihabara.9.t:0 "The Imperial Protection Association"
+akihabara.9.d:0 ""
+akihabara.9.a:0 "I see."
+
+akihabara.10.t:0 "The First Coalition Government"
+akihabara.10.d:0 ""
+akihabara.10.a:0 "We'll go for a Communist Coalition."
+akihabara.10.b:0 "Perhaps a Democratic Coalition will work best."
+akihabara.10.c:0 "Stick with a Non-Aligned Coalition."
+akihabara.10.d1:0 "We can survive only with a Fascist Coalition."
+
+akihabara.11.t:0 "Communist Coalition In Power"
+akihabara.11.t:0 "Streets and buildings are currently being organized into temporary communes, with representatives being selected accordingly to represent them."
+akihabara.11.t:0 "Excellent."
+
+akihabara.12.t:0 "Democratic Coalition In Power"
+akihabara.12.t:0 "Temporary polling stations are being setup throughout Akihabara, where people will decide on the direction their nation should go."
+akihabara.12.t:0 "Excellent."
+
+akihabara.13.t:0 "Non-Aligned Coalition In Power"
+akihabara.13.t:0 "Lieutenant General Naotada Moriyama and his colleagues have decided that deicsive action is required. With power secured, they're able to declare Martial Law, establishing a Military Junta."
+akihabara.13.t:0 "Excellent."
+
+akihabara.14.t:0 "Fascist Coalition In Power"
+akihabara.14.t:0 "The shouts of those who believe that Anime is the supreme culture have drowned out all else. Normal citizens are demanded to embrace Anime, and those who do not are branded as Normies."
+akihabara.14.t:0 "Excellent."
+
+akihabara.15.t:0 "First Contact"
+akihabara.15.d:0 "Even though only a few days have passed since what apparently seems to be the fact that we've been transported into the twentieth century, our sudden appearance has already caused a lot of concern to the Imperial Japanese from the neigbouring 20th century Tokyo. They've quite obviously noticed the humongous buildings and modern technology that we've carried along with us. A squad of masked Japanese scouts has been sent by the Japanese in order to discover what we are, and what are our intents. How should we answer to their questions?"
+akihabara.15.a:0 "You might not believe us, but we've come from the future..."
+akihabara.15.b:0 "We could very well ask you the same question."
+akihabara.15.c:0 "We are extraterrestial beings, coming from outer space."
+akihabara.15.d1:0 "No trespassing into our terrain, intruders. We will not repeat ourselves."
+
+akihabara.16.t:0 "Peaceful and Open"
+akihabara.16.d:0 "The Council has decided to welcome the Imperial Japanese with open arms. The time and location of our meeting is being worked out as we speak."
+akihabara.16.a:0 "Great!"
+
+akihabara.17.t:0 "Isolationist"
+akihabara.17.da:0 "The Council has decided to be deliberately vague, putting both sides in a wary position of what exactly might happen next."
+akihabara.17.db:0 "The Council has decided to feign ignorance at their circumstances, putting both sides in a wary position of what exactly might happen next."
+akihabara.17.a:0 "Troublesome."
+
+akihabara.18.t:0 "Militaristic"
+akihabara.18.d:0 "The Council has decided that Akihabara is its own sovereign nation, answerable to no one. The fact that these Imperial Japanese have so rudely barged in without invitation is tantamount to trespassing. This will not be tolerated."
+akihabara.18.a:0 "We'll protect our sacred land at all costs."
+
+akihabara.19.t:0 "Imperial Japanese Visit"
+akihabara.19.d:0 "Prime Minister Kōki Hirota has visited under the protection of Liutenant General Koichi Iwakoshi. The Liutenant General was very interested in the equipment of the JSDF regiments, while the Prime Minister was more interested in the various aspects of Otaku culture."
+akihabara.19.a:0 "I see you're a man of culture as well."
+
+akihabara.20.t:0 "The 2nd Imperial Japanese Visit"
+akihabara.20.d:0 "Our policy of openness has attracted a great deal of attention from the Imperial Japanese. More and more are requesting to enter Akihabara, in an even grander visit this time."
+akihabara.20.a:0 "Preparations must be made."
+
+akihabara.21.t:0 "Missing Person?"
+akihabara.21.d:0 "Grave news, one of the visiting Imperial Japanese Ambassadors is missing. We've already sent search parties out, but it seems that he really has vanished into thin air."
+akihabara.21.a:0 "How could this happen?"
+
+akihabara.22.t:0 "Military Access"
+akihabara.22.d:0 "The Imperial Japanese Army has requested formal permission to enter the city to search for their missing ambassador."
+akihabara.22.a:0 "Let them in."
+akihabara.22.b:0 "This smells like a trap, deny them access."
+
+akihabara.23.t:0 "Sneak Attack!"
+akihabara.23.d:0 "There was no lost ambassador after all! Once the Imperial Japanese Army entered the area, they overthrew the council of 100 and declared Martial Law!"
+akihabara.23.a:0 "This is terrible!"
+
+akihabara.24.t:0 "Military Seizes Control"
+akihabara.24.d:0 "The remnants of the JSDF have managed to wrestle control back. Heavy urban fighting has broken out, and the former glow of the streets has been replaced with rubble and broken glass."
+akihabara.24.a:0 "We're in control, at least for now."
+
+akihabara.25.t:0 "Demands from the Imperial Army"
+akihabara.25.d:0 "With the disappearance of the ambassador, the Imperial Japanese Army has assumed the worst, and issued a statement demanding we return him safely. The fact that we don't have him has fallen on deaf ears."
+akihabara.25.a:0 "Damn."
+
+akihabara.26.t:0 "Imperial Japanese Units Caught"
+akihabara.26.d:0 "During Midnight, at roughly 2AM, some of our citzens, whom were returning to their temporary lodgings after watching anime, spotted and took photos of Imperial Japanese Infiltrators.\n\nUsing the flashes on thier smartphones, irrefutable evidence has been obtained. What shall be done about this?"
+akihabara.26.a:0 "Demand an apology."
+akihabara.26.b:0 "WAR!"
+
+akihabara.27.t:0 "An Apology is Demanded"
+akihabara.27.d:0 "The council has decided to lodge a diplomatic complaint towards the Imperial Japanese. Any violation of our borders will not be tolerated."
+akihabara.27.a:0 "They'd better apologize."
+
+akihabara.28.t:0 "WAR!"
+akihabara.28.d:0 "This is and absolutely clear violation of our sovereignty! The council has deemed this as a just cause for our military retaliation."
+akihabara.28.a:0 "We need support from the military first."
+akihabara.28.b:0 "To war!"
+
+akihabara.29.t:0 "Gain the Support of the JSDF"
+akihabara.29.d:0 "We must make the Army understand this is unacceptable!"
+akihabara.29.a:0 "Convince them."
+
+akihabara.30.t:0 "Declare War!"
+akihabara.30.d:0 "With the army on our side, we are ready and prepared! We should strike now, before they even have the chance to prepare. First stop, the Imperial Palace!"
+akihabara.30.a:0 "Banzai!"
+
+akihabara.31.t:0 "The JSDF Refuses to Mobilize"
+akihabara.31.d:0 "The JSDF has refused to support our war against the Imperial Japanese, remaining idle despite overwhelming evidence that they intend on invading us. We're unable to go to war without their support."
+akihabara.31.a:0 "We'll have to settle for an apology then."
+
+akihabara.32.t:0 "Apology Refused"
+akihabara.32.d:0 "The Imperial Japanese have refused to apologize for 'walking into our backyard'. Already, zoom lenses on cameras and telescopes have witnessed the Imperial Japanese Army mobilizing to invade Akihabara."
+akihabara.32.a:0 "Outrageous!"
+akihabara.32.b:0 "Outrageous! Mobilize our troops!"
+
+akihabara.33.t:0 "War Declared!"
+akihabara.33.d:0 "The Imperial Japanese have declared war on us! While we've managed to beat them back initially, we cannot possibly win in a war of attrition, so we must win this war as fast as possible! First stop, the Imperial Palace!"
+akihabara.33.a:0 "Banzai!"
+
+akihabara.34.t:0 "Fall of the Imperial Palace"
+akihabara.34.d:0 "We've managed to take the Imperial Palace. Brutal fighting occured as many Imperial Japanese units fought like men possessed. Only by expending large amounts of munition were we able to capture the Palace. The Emperor himself seems to have been evacuated."
+akihabara.35.d:0 "We've captured the Imperial Palace! Despite initial resistance, our element of surprise proved to be capable, easily overwhelming them. Furthermore, the Emperor himself is now our hostage."
+akihabara.34.a:0 "Next stop: Osaka!"
+akihabara.35.a:0 "Let's negotiate with the Emperor."
+
+akihabara.36.t:0 "Fall of Osaka"
+akihabara.36.d:0 "With the rapid fall of Osaka, the Imperial Japanese High Command has sent out negotiators to perhaps, salvage the situation."
+akihabara.36.a:0 "Negotiate with them."
+akihabara.36.b:0 "We'll only accept unconditional surrender. Next stop: Nagasaki!"
+
+akihabara.37.t:0 "Fall of Nagasaki"
+akihabara.37.d:0 "With the major cities of Japan under our rule, it is inevitable that they capitulate to our demands."
+akihabara.37.a:0 "Victory at last."
+
+akihabara.38.t:0 "The Emperor Grants Amnesty"
+akihabara.38.d:0 "The Emperor has declared this war has been a misguided affair all along. The JSDF have been granted full amnesty, and those generals whom acted dishonorably have been discharged from the army."
+akihabara.38.a:0 "Peace at last."
+
+akihabara.39.t:0 "The New Imperial Diet"
+akihabara.39.d:0 "With the Emperor's blessing, the Imperial Diet was dissolved, and a new cabinet was formed. A few key figures from the Council of 100 has been appointed to key positions of power."
+akihabara.39.a:0 "Excellent."
+
+akihabara.40.t:0 "The Emperor is a Weeb"
+akihabara.40.d:0 "The Emperor has declared, in a public address to the entire nation, that Anime is the supreme culture. Amnesty has been granted to all units, and he hopes that the nation will quickly embrace Anime culture."
+akihabara.40.a:0 "I see you're a man of culture as well."
+
+akihabara.41.t:0 "Anime Reigns Supreme"
+akihabara.41.d:0 "With the Emperor's blessing, a new government is formed, with the spreading of anime culture at its core. All throughout Japan, citizens are converting, and those who refuse are quickly branded Normies and ostracized."
+akihabara.41.a:0 "Anime wasn't a mistake."
+
+akihabara.42.t:0 "The Greater Council of 100"
+akihabara.42.d:0 "With our victory secured, the council's power has expanded immensely. Leading a small town is a far different situation from leading an enture nation, and shakeups in the political situation are inevitable."
+akihabara.42.a:0 "A masterstroke of diplomacy, regardless."
+
+akihabara_economy.1.t:0 "Economic Pathway"
+akihabara_economy.1.d:0 "We must make a decision on what our economy should be."
+akihabara_economy.1.a:0 "A Decentralized Economy!"
+akihabara_economy.1.b:0 "A Centralized Economy!"
  
- akihabara.2.t:0 "Economic Pathway"
- akihabara.2.d:0 "We must make a decision on what our economy should be."
- akihabara.2.a:0 "A Decentralized Economy!"
- akihabara.2.b:0 "A Centralized Economy!"
+akihabara_economy.2.t:0 "Communal Construction"
+akihabara_economy.2.d:0 "Our policy of decentralization has meant that rural villages have received the support they need to expand their infrastructure and clear out previously unusable land."
+akihabara_economy.2.a:0 "Excellent!"
  
- akihabara.3.t:0 "Communal Construction"
- akihabara.3.d:0 "Our policy of decentralization has meant that rural villages have received the support they need to expand their infrastructure and clear out previously unusable land."
- akihabara.3.a:0 "Excellent!"
+akihabara_economy.3.t:0 "Centralized Investment"
+akihabara_economy.3.d:0 "Our policy of centralization has boosted the confidence of large investors. They have announced greater expansion projects for our industry and our construction."
+akihabara_economy.3.a:0 "Excellent!"
  
- akihabara.4.t:0 "Centralized Investment"
- akihabara.4.d:0 "Our policy of centralization has boosted the confidence of large investors. They have announced greater expansion projects for our industry and our construction."
- akihabara.4.a:0 "Excellent!"
+akihabara_economy.4.t:0 "Colonization Decision"
+akihabara_economy.4.d:0 "Our newly developed colonial regions should now be available to receive our most important export of Anime. However, our resources are limited, so a decision must be made about which region to expand in."
+akihabara_economy.4.a:0 "Korea!"
+akihabara_economy.4.b:0 "Manchuria!"
  
- akihabara.5.t:0 "Colonization Decision"
- akihabara.5.d:0 "Our newly developed colonial regions should now be available to receive our most important export of Anime. However, our resources are limited, so a decision must be made about which region to expand in."
- akihabara.5.a:0 "Korea!"
- akihabara.5.b:0 "Manchuria!"
+akihabara_economy.5.t:0 "Contradictory Anime Practices"
+akihabara_economy.5.d:0 "Our policy on anime in the workplace runs at odds to our economic policy. This has caused a significant amount of political turmoil, and we must suffer the consequences."
+akihabara_economy.5.a:0 "It is worth it."
  
- akihabara.6.t:0 "Contradictory Anime Practices"
- akihabara.6.d:0 "Our policy on anime in the workplace runs at odds to our economic policy. This has caused a significant amount of political turmoil, and we must suffer the consequences."
- akihabara.6.a:0 "It is worth it."
- 
- akihabara.7.t:0 "Beginning of the Recovery"
- akihabara.7.d:0 "Our efforts in restoring the basic neccesities of Akihabara have placed us in a much better position than before. With a basic standard of living, it seems like we're on our way to recovering from the Anomaly."
- akihabara.7.a:0 "Finally!"
+akihabara_economy.6.t:0 "Beginning of the Recovery"
+akihabara_economy.6.d:0 "Our efforts in restoring the basic neccesities of Akihabara have placed us in a much better position than before. With a basic standard of living, it seems like we're on our way to recovering from the Anomaly."
+akihabara_economy.6.a:0 "Finally!"

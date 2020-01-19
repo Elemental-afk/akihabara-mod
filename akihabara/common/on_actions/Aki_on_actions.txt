@@ -1,0 +1,11 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			AKI = { 
+				country_event = akihabara.1
+			}
+		}
+	}
+
+}

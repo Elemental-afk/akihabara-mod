@@ -4,67 +4,1047 @@
 
 add_namespace = akihabara
 
-# First contact
+# Take Stock
 country_event = {
 	id = akihabara.1
 	title = akihabara.1.t
 	desc = akihabara.1.d
-	picture =  GFX_report_event_first_contact
-	
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.1" }
+
+	fire_only_once = yes
 	is_triggered_only = yes
-	
-	option = { # We are from the future
+
+	option = { # ok retard thanks for lore
 		name = akihabara.1.a
-		
-	}
-	
-	option = { # But who are you?
-		name = akihabara.1.b
-		
-	}
-	
-	option = { # We come from an outer world
-		name = akihabara.1.c
-		
-	}
-	
-	option = { # Cease to exist or we will beat your asses
-		name = akihabara.1.e
-		
+		country_event = { id = akihabara.2 days = 5 }
 	}
 }
 
-#Integrate Railways 
+# The First Senate Meeting
 country_event = {
 	id = akihabara.2
 	title = akihabara.2.t
 	desc = akihabara.2.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.2" }
+
+	is_triggered_only = yes
+	
+	option = { # The Japanese Otaku Community
+		name = akihabara.2.a
+		country_event = akihabara.3
+	}
+
+	option = { # The Tokyo Conservative Citizen Council
+		name = akihabara.2.b
+		country_event = akihabara.4
+	}
+
+	option = { # The Foreign Investors Board
+		name = akihabara.2.c
+		country_event = akihabara.5
+	}
+
+	option = { # The Foreign Otaku Community
+		name = akihabara.2.d1
+		country_event = akihabara.6
+	}
+
+	option = { # The JSDF Operation Staff
+		name = akihabara.2.e
+		country_event = akihabara.7
+	}
+
+	option = { # The Writers Association
+		name = akihabara.2.f
+		country_event = akihabara.8
+	}
+
+	option = { # The Imperial Protection Association
+		name = akihabara.2.g
+		country_event = akihabara.9
+	}
+
+	option = { # begone im done
+		name = akihabara.2.h
+		country_event = { id = akihabara.10 days = 5 }
+	}
+}
+
+# The Japanese Otaku Community
+country_event = {
+	id = akihabara.3
+	title = akihabara.3.t
+	desc = akihabara.3.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.3" }
+
+	is_triggered_only = yes
+
+	option = { # back to main
+		name = akihabara.3.a
+		country_event = akihabara.2
+	}
+}
+
+# The Tokyo Conservative Citizen Council
+country_event = {
+	id = akihabara.4
+	title = akihabara.4.t
+	desc = akihabara.4.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.4" }
+
+	is_triggered_only = yes
+
+	option = { # back to main
+		name = akihabara.4.a
+		country_event = akihabara.2
+	}
+}
+
+# The Foreign Investors Board
+country_event = {
+	id = akihabara.5
+	title = akihabara.5.t
+	desc = akihabara.5.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.5" }
+
+	is_triggered_only = yes
+
+	option = { # back to main
+		name = akihabara.5.a
+		country_event = akihabara.2
+	}
+}
+
+# The Foreign Otaku Community
+country_event = {
+	id = akihabara.6
+	title = akihabara.6.t
+	desc = akihabara.6.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.6" }
+
+	is_triggered_only = yes
+
+	option = { # back to main
+		name = akihabara.6.a
+		country_event = akihabara.2
+	}
+}
+
+# The JSDF Operation Staff
+country_event = {
+	id = akihabara.7
+	title = akihabara.7.t
+	desc = akihabara.7.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.7" }
+
+	is_triggered_only = yes
+
+	option = { # back to main
+		name = akihabara.7.a
+		country_event = akihabara.2
+	}
+}
+
+# The Writers Association
+country_event = {
+	id = akihabara.8
+	title = akihabara.8.t
+	desc = akihabara.8.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.8" }
+
+	is_triggered_only = yes
+
+	option = { # back to main
+		name = akihabara.8.a
+		country_event = akihabara.2
+	}
+}
+
+# The Imperial Protection Association
+country_event = {
+	id = akihabara.9
+	title = akihabara.9.t
+	desc = akihabara.9.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.9" }
+
+	is_triggered_only = yes
+
+	option = { # back to main
+		name = akihabara.9.a
+		country_event = akihabara.2
+	}
+}
+
+# The First Senate Meeting
+country_event = {
+	id = akihabara.10
+	title = akihabara.10.t
+	desc = akihabara.10.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.10" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Communist Coalition
+		name = akihabara.10.a
+		set_politics = { ruling_party = communism elections_allowed = no }
+		hidden_effect = {
+			country_event = { id = akihabara.11 days = 5 }
+		}
+	}
+
+	option = { # Democratic Coalition
+		name = akihabara.10.b
+		set_politics = { ruling_party = democratic elections_allowed = yes }
+		hidden_effect = {
+			country_event = { id = akihabara.12 days = 5 }
+		}
+	}
+
+	option = { # Non-Aligned Coalition
+		name = akihabara.10.c
+		hidden_effect = {
+			country_event = { id = akihabara.13 days = 5 }
+		}
+	}
+
+	option = { # Fascist Coalition
+		name = akihabara.10.d1
+		set_politics = { ruling_party = fascism elections_allowed = no }
+		hidden_effect = {
+			country_event = { id = akihabara.14 days = 5 }
+		}
+	}
+}
+
+# Communist Coalition In Power
+country_event = {
+	id = akihabara.11
+	title = akihabara.11.t
+	desc = akihabara.11.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.11" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # leads to first contact
+		name = akihabara.11.a
+		hidden_effect = {
+			country_event = { id = akihabara.15 days = 5 }
+		}
+	}
+}
+
+# Democratic Coalition In Power
+country_event = {
+	id = akihabara.12
+	title = akihabara.12.t
+	desc = akihabara.12.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.12" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # leads to first contact
+		name = akihabara.12.a
+		hidden_effect = {
+			country_event = { id = akihabara.15 days = 5 }
+		}
+	}
+}
+
+# Non-Aligned Coalition In Power
+country_event = {
+	id = akihabara.13
+	title = akihabara.13.t
+	desc = akihabara.13.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.13" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # leads to first contact
+		name = akihabara.13.a
+		hidden_effect = {
+			country_event = { id = akihabara.15 days = 5 }
+		}
+	}
+}
+
+# Fascist Coalition In Power
+country_event = {
+	id = akihabara.14
+	title = akihabara.14.t
+	desc = akihabara.14.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.14" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # leads to first contact
+		name = akihabara.14.a
+		hidden_effect = {
+			country_event = { id = akihabara.15 days = 5 }
+		}
+	}
+}
+
+# First Contact
+country_event = {
+	id = akihabara.15
+	title = akihabara.15.t
+	desc = akihabara.15.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.14" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # We are from the future
+		name = akihabara.15.a
+		trigger = {
+			OR = {
+				has_government = communism
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+		hidden_effect = {
+			country_event = { id = akihabara.16 days = 5 }
+		}
+	}
+
+	option = { # But who are you?
+		name = akihabara.15.b
+		hidden_effect = {
+			set_country_flag = AKI_isolationist_1_flag
+			country_event = { id = akihabara.17 days = 5 }
+		}
+	}
+
+	option = { # We come from an outer world
+		name = akihabara.15.c
+		hidden_effect = {
+			set_country_flag = AKI_isolationist_2_flag
+			country_event = { id = akihabara.17 days = 5 }
+		}
+	}
+
+	option = { # Cease to exist or we will beat your asses
+		name = akihabara.15.d1
+		trigger = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+		hidden_effect = {
+			country_event = { id = akihabara.18 days = 5 }
+		}
+	}
+}
+
+# Peaceful and Open
+country_event = {
+	id = akihabara.16
+	title = akihabara.16.t
+	desc = akihabara.16.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.16" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # great
+		name = akihabara.16.a
+		hidden_effect = {
+			country_event = { id = akihabara.19 days = 20 }
+		}
+	}
+}
+
+# Isolationist
+country_event = {
+	id = akihabara.17
+	title = akihabara.17.t
+	desc = {
+		text = akihabara.17.db
+		trigger = {
+			has_country_flag = AKI_isolationist_1_flag
+		}
+	}
+	desc = {
+		text = akihabara.17.da
+		trigger = {
+			has_country_flag = AKI_isolationist_2_flag
+		}
+	}
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.17" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # great
+		name = akihabara.17.a
+		hidden_effect = {
+			country_event = { id = akihabara.26 days = 20 }
+		}
+	}
+}
+
+# Militaristic
+country_event = {
+	id = akihabara.18
+	title = akihabara.18.t
+	desc = akihabara.18.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.18" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # great
+		name = akihabara.18.a
+		hidden_effect = {
+			country_event = { id = akihabara.26 days = 20 }
+		}
+	}
+}
+
+# Imperial Japanese Visit
+country_event = {
+	id = akihabara.19
+	title = akihabara.19.t
+	desc = akihabara.19.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.19" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.19.a
+		hidden_effect = {
+			country_event = { id = akihabara.20 days = 5 }
+		}
+	}
+}
+
+# 2nd Imperial Japanese Visit
+country_event = {
+	id = akihabara.20
+	title = akihabara.20.t
+	desc = akihabara.20.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.20" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.20.a
+		hidden_effect = {
+			country_event = { id = akihabara.21 days = 5 }
+		}
+	}
+}
+
+# Missing Person?
+country_event = {
+	id = akihabara.21
+	title = akihabara.21.t
+	desc = akihabara.21.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.21" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.21.a
+		hidden_effect = {
+			country_event = { id = akihabara.22 days = 5 }
+		}
+	}
+}
+
+# Military Access
+country_event = {
+	id = akihabara.22
+	title = akihabara.22.t
+	desc = akihabara.22.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.22" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # let them in
+		name = akihabara.22.a
+		hidden_effect = {
+			country_event = akihabara.23
+		}
+	}
+	option = { # its a trap
+		name = akihabara.22.a
+		hidden_effect = {
+			country_event = akihabara.25
+		}
+	}
+}
+
+# Sneak Attack!
+country_event = {
+	id = akihabara.23
+	title = akihabara.23.t
+	desc = akihabara.23.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.23" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.23.a
+		hidden_effect = {
+			country_event = { id = akihabara.24 days = 10 }
+		}
+	}
+}
+
+# Military Seizes Control
+country_event = {
+	id = akihabara.24
+	title = akihabara.24.t
+	desc = akihabara.24.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.23" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.24.a
+		hidden_effect = {
+			country_event = { id = akihabara.33 days = 5 }
+		}
+	}
+}
+
+# Demands from the Imperial Army
+country_event = {
+	id = akihabara.25
+	title = akihabara.25.t
+	desc = akihabara.25.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.25" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.25.a
+		hidden_effect = {
+			country_event = { id = akihabara.33 days = 15 }
+		}
+	}
+}
+
+# Imperial Japanese Units Caught
+country_event = {
+	id = akihabara.26
+	title = akihabara.26.t
+	desc = akihabara.26.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.26" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.26.a
+		hidden_effect = {
+			country_event = { id = akihabara.27 days = 20 }
+		}
+	}
+	option = {
+		name = akihabara.26.b
+		hidden_effect = {
+			country_event = { id = akihabara.28 days = 5 }
+		}
+	}
+}
+
+# An Apology is Demanded
+country_event = {
+	id = akihabara.27
+	title = akihabara.27.t
+	desc = akihabara.27.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.27" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.27.a
+		hidden_effect = {
+			country_event = { id = akihabara.32 days = 5 }
+		}
+	}
+}
+
+# WAR!
+country_event = {
+	id = akihabara.28
+	title = akihabara.28.t
+	desc = akihabara.28.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.28" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.28.a
+		trigger = {
+			has_government = fascism
+		}
+		hidden_effect = {
+			country_event = { id = akihabara.29 days = 5 }
+		}
+	}
+	option = {
+		name = akihabara.28.b
+		trigger = {
+			has_government = neutrality
+		}
+		hidden_effect = {
+			country_event = { id = akihabara.30 days = 10 }
+		}
+	}
+}
+
+# Gain the Support of the JSDF
+country_event = {
+	id = akihabara.29
+	title = akihabara.29.t
+	desc = akihabara.29.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.29" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.29.a
+		hidden_effect = {
+			random_list = {
+				50 = {
+					country_event = { id = akihabara.30 days = 15 }
+				}
+				50 = {
+					country_event = { id = akihabara.31 days = 5 }
+				}
+			}
+		}
+	}
+}
+
+# Declare War!
+country_event = {
+	id = akihabara.30
+	title = akihabara.30.t
+	desc = akihabara.30.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event akihabara.30" 
+		declare_war_on = { target = JAP type = topple_government }
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.30.a
+		set_country_flag = AKI_war_declared_by_akihabara_flag
+	}
+}
+
+# The JSDF Refuses to Mobilize
+country_event = {
+	id = akihabara.31
+	title = akihabara.31.t
+	desc = akihabara.31.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.31" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.31.a
+		hidden_effect = {
+			country_event = { id = akihabara.27 days = 5 }
+		}
+	}
+}
+
+# Apology Refused
+country_event = {
+	id = akihabara.32
+	title = akihabara.32.t
+	desc = akihabara.32.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.31" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.32.a
+		hidden_effect = {
+			country_event = { id = akihabara.33 days = 5 }
+		}
+	}
+	option = {
+		name = akihabara.32.b
+		hidden_effect = {
+			country_event = { id = akihabara.30 days = 5 }
+		}
+	}
+}
+
+# Declare War!
+country_event = {
+	id = akihabara.33
+	title = akihabara.33.t
+	desc = akihabara.33.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event akihabara.33" 
+		JAP = {
+			declare_war_on = { target = AKI type = annex_everything }
+		}
+	}
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.33.a
+		set_country_flag = AKI_war_declared_on_akihabara_flag
+	}
+}
+
+# Fall of the Imperial Palace
+country_event = {
+	id = akihabara.34
+	title = akihabara.34.t
+	desc = akihabara.34.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.34" }
+
+	fire_only_once = yes
+
+	trigger = {
+		282 = { is_controlled_by = AKI }
+		AKI = { 
+			has_war_with = JAP 
+			has_country_flag = AKI_war_declared_on_akihabara_flag
+		}
+		original_tag = AKI
+	}
+
+	mean_time_to_happen = { days = 5 }
+
+	option = {
+		name = akihabara.34.a
+		set_country_flag = AKI_tokyo_taken_flag
+	}
+}
+
+# Fall of the Imperial Palace 2 electric boogaloo
+country_event = {
+	id = akihabara.35
+	title = akihabara.34.t
+	desc = akihabara.35.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.35" }
+
+	fire_only_once = yes
+
+	trigger = {
+		282 = { is_controlled_by = AKI }
+		AKI = { 
+			has_war_with = JAP
+			has_country_flag = AKI_war_declared_by_akihabara_flag
+		}
+		original_tag = AKI
+	}
+
+	mean_time_to_happen = { days = 5 }
+
+	option = {
+		name = akihabara.35.a
+		hidden_effect = {
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				country_event = { id = akihabara.38 days = 5 }
+			}
+			else = {
+				country_event = { id = akihabara.40 days = 5 }
+			}
+		}
+	}
+}
+
+# Fall of Osaka
+country_event = {
+	id = akihabara.36
+	title = akihabara.36.t
+	desc = akihabara.36.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.36" }
+
+	fire_only_once = yes
+
+	trigger = {
+		531 = { is_controlled_by = AKI }
+		AKI = { 
+			has_war_with = JAP 
+			has_country_flag = AKI_tokyo_taken_flag
+			has_country_flag = AKI_war_declared_on_akihabara_flag
+		}
+		original_tag = AKI
+	}
+
+	mean_time_to_happen = { days = 5 }
+
+	option = {
+		name = akihabara.36.a
+		hidden_effect = {
+			country_event = { id = akihabara.39 days = 5 }
+		}
+	}
+	option = {
+		name = akihabara.36.b
+		set_country_flag = AKI_osaka_taken_flag
+	}
+}
+
+# Fall of Nagasaki
+country_event = {
+	id = akihabara.37
+	title = akihabara.37.t
+	desc = akihabara.37.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.37" }
+
+	fire_only_once = yes
+
+	trigger = {
+		528 = { is_controlled_by = AKI }
+		AKI = { 
+			has_war_with = JAP
+			has_country_flag = AKI_tokyo_taken_flag
+			has_country_flag = AKI_osaka_taken_flag
+			has_country_flag = AKI_war_declared_on_akihabara_flag
+		}
+		original_tag = AKI
+	}
+
+	mean_time_to_happen = { days = 5 }
+
+	option = {
+		name = akihabara.37.a
+		hidden_effect = {
+			country_event = { id = akihabara.42 days = 10 }
+		}
+	}
+}
+
+# The Emperor Grants Amnesty
+country_event = {
+	id = akihabara.38
+	title = akihabara.38.t
+	desc = akihabara.38.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.38" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.38.a
+		hidden_effect = {
+			country_event = { id = akihabara.39 days = 10 }
+		}
+	}
+}
+
+# The New Imperial Diet
+country_event = {
+	id = akihabara.39
+	title = akihabara.39.t
+	desc = akihabara.39.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.39" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.39.a
+	}
+}
+
+# The Emperor is a Weeb
+country_event = {
+	id = akihabara.40
+	title = akihabara.40.t
+	desc = akihabara.40.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.40" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.40.a
+		hidden_effect = {
+			country_event = { id = akihabara.41 days = 5 }
+		}
+	}
+}
+
+# Anime Reigns Supreme
+country_event = {
+	id = akihabara.41
+	title = akihabara.41.t
+	desc = akihabara.41.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.41" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.41.a
+		hidden_effect = {
+			country_event = { id = akihabara.42 days = 5 }
+		}
+	}
+}
+
+# The Greater Council of 100
+country_event = {
+	id = akihabara.42
+	title = akihabara.42.t
+	desc = akihabara.42.d
+	picture = GFX_report_event_first_contact
+
+	immediate = { log = "[GetDateText]: [Root.GetName]: event akihabara.42" }
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = akihabara.42.a
+	}
+}
+
+add_namespace = akihabara_economy
+
+#Integrate Railways 
+country_event = {
+	id = akihabara_economy.1
+	title = akihabara_economy.1.t
+	desc = akihabara_economy.1.d
 	picture =  GFX_report_event_first_contact
 	
 	is_triggered_only = yes
 	
 	option = { # Decentralization
-		name = akihabara.2.a
+		name = akihabara_economy.1.a
 		
 	}
 	
 	option = { # Centralization
-		name = akihabara.2.b
+		name = akihabara_economy.1.b
 		
 	}
 }
 
 #Decentralization Event
 country_event = {
-	id = akihabara.3
-	title = akihabara.3.t
-	desc = akihabara.3.d
+	id = akihabara_economy.2
+	title = akihabara_economy.2.t
+	desc = akihabara_economy.2.d
 	picture =  GFX_report_event_first_contact
 	
 	is_triggered_only = yes
 	
 	option = { # Free Real Estate
-		name = akihabara.3.a
+		name = akihabara_economy.2.a
 		random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -84,15 +1064,15 @@ country_event = {
 
 #Centralization Event
 country_event = {
-	id = akihabara.4
-	title = akihabara.4.t
-	desc = akihabara.4.d
+	id = akihabara_economy.3
+	title = akihabara_economy.3.t
+	desc = akihabara_economy.3.d
 	picture =  GFX_report_event_first_contact
 	
 	is_triggered_only = yes
 	
 	option = { # Free Real Estate
-		name = akihabara.4.a
+		name = akihabara_economy.3.a
 		random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -113,9 +1093,9 @@ country_event = {
 
 #colonization Event
 country_event = {
-	id = akihabara.5
-	title = akihabara.5.t
-	desc = akihabara.5.d
+	id = akihabara_economy.4
+	title = akihabara_economy.4.t
+	desc = akihabara_economy.4.d
 	picture =  GFX_report_event_first_contact
 	
 	is_triggered_only = yes
@@ -125,7 +1105,7 @@ country_event = {
 			AND = {has_full_control_of_state = 525
 			has_full_control_of_state = 527}
 		}
-		name = akihabara.5.a
+		name = akihabara_economy.4.a
 		525 = {
 			if = {
 				limit = { is_controlled_by = ROOT }
@@ -164,7 +1144,7 @@ country_event = {
 				has_full_control_of_state = 745
 				has_full_control_of_state = 610 }
 		}
-		name = akihabara.5.b
+		name = akihabara_economy.4.b
 			716 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
@@ -266,15 +1246,15 @@ country_event = {
 
 #Ding Dong Your Focus is Wrong Event
 country_event = {
-	id = akihabara.6
-	title = akihabara.6.t
-	desc = akihabara.6.d
+	id = akihabara_economy.5
+	title = akihabara_economy.5.t
+	desc = akihabara_economy.5.d
 	picture =  GFX_report_event_first_contact
 	
 	is_triggered_only = yes
 	
 	option = { # oof ouch owie
-		name = akihabara.6.a
+		name = akihabara_economy.6.a
 		add_political_power = -100
 	}
 }
@@ -282,15 +1262,15 @@ country_event = {
 
 #Recovery from Anomaly
 country_event = {
-	id = akihabara.7
-	title = akihabara.7.t
-	desc = akihabara.7.d
+	id = akihabara_economy.6
+	title = akihabara_economy.6.t
+	desc = akihabara_economy.6.d
 	picture =  GFX_report_event_first_contact
 	
 	is_triggered_only = yes
 	
 	option = { # RECOVERY
-		name = akihabara.7.a
+		name = akihabara.6.a
 		add_political_power = 50
 		swap_ideas = {
 			remove_idea = the_shock_1
@@ -302,291 +1282,3 @@ country_event = {
 	}
 
 }	
-###STARTING EVENTS###
-	
-#The lore, at the start
-
-	country_event = {
-	id = akihabara.8
-	title = akihabara.8.t
-	desc = akihabara.8.d
-	picture =  GFX_report_event_first_contact
-	
-	trigger = {
-		country_exists = AKI
-	}
-	
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-	
-	option = { # ok retard thanks for lore
-		name = akihabara.8.a
-		country_event = {
-        id = akihabara.1
-        days = 5
-      }
-	}
-	
-}
-
-#Mutual talks after asking them 
-country_event = {
-	id = akihabara.9
-	title = akihabara.9.t
-	desc = akihabara.9.d
-	picture =  GFX_report_event_first_contact
-	
-	is_triggered_only = yes
-	
-	option = { # Give them our goods then!
-		name = akihabara.9.a
-		
-	}
-	
-}
-
-#prove that you are from an other planet (always fails)
-country_event = {
-	id = akihabara.10
-	title = akihabara.10.t
-	desc = akihabara.10.d
-	picture =  GFX_report_event_first_contact
-	
-	is_triggered_only = yes
-	
-	option = { # Show them uhh, sci fi mangas?
-		name = akihabara.10.a
-		
-		hidden_effect = {
-		country_event = {
-        id = akihabara.10
-        days = 5
-      }
-        }
-	}
-	
-	option = { # Show them our weapons
-		name = akihabara.10.b
-		
-		hidden_effect = {
-        country_event = {
-        id = akihabara.10
-        days = 5
-      }
-      }
-	}
-	
-	option = { # Show them our technology
-		name = akihabara.10.c
-		
-		hidden_effect = {
-        country_event = {
-        id = akihabara.12
-        days = 5
-      }
-     }
-	}
-	
-
-}
-
-#prove that you are from the future (few options)
-country_event = {
-	id = akihabara.11
-	title = akihabara.11t
-	desc = akihabara.11.d
-	picture =  GFX_report_event_first_contact
-	
-	is_triggered_only = yes
-	
-	option = { # high effort showcase
-		name = akihabara.11.a
-		add_political_power = -100
-		hidden_effect = {
-		country_event = {
-        id = akihabara.12
-        days = 5
-      }
-        }
-	}
-	
-	option = { # medium effort showcase
-		name = akihabara.11.b
-		add_political_power = -50
-		hidden_effect = {
-        country_event = {
-        id = akihabara.12
-        days = 5
-      }
-      }
-	}
-	
-	option = { # low effort showcase
-		name = akihabara.11.c
-		add_political_power = -25
-		hidden_effect = {
-        country_event = {
-        id = akihabara.12
-        days = 5
-      }
-     }
-	}
-}
-
-#they are scared of us, japanese will attack 
-country_event = {
-	id = akihabara.12
-	title = akihabara.12.t
-	desc = akihabara.12.d
-	picture =  GFX_report_event_first_contact
-	
-	is_triggered_only = yes
-	
-	option = { # Well, lets wait for it 
-		name = akihabara.12.a
-		
-	}
-	option = { # Attack first!
-		name = akihabara.12.a
-		
-	}
-	
-
-}
-
-#higher interest in akihabara
-country_event = {
-	id = akihabara.13
-	title = akihabara.13.t
-	desc = akihabara.13.d
-	picture =  GFX_report_event_first_contact
-	
-	is_triggered_only = yes
-	
-	option = { # I mean, why not?
-		name = akihabara.13.a
-		add_political_power = -50
-	    hidden_effect = {
-        country_event = {
-        id = akihabara.14
-        days = 5
-      }
-      }
-	}
-	
-	
-}
-
-#Emperor plans his visit to Akihabara
-country_event = {
-	id = akihabara.14
-	title = akihabara.14.t
-	desc = akihabara.14.d
-	picture =  GFX_report_event_first_contact
-	
-	is_triggered_only = yes
-	
-	option = { # A huge honour, announce this!
-		name = akihabara.14.a
-		add_political_power = +50
-	    hidden_effect = {
-        country_event = {
-        id = akihabara.15
-        days = 5
-      }
-      }
-	}
-	
-	
-}
-
-#Emperor captured AAAAAAAAAAAAAAAAAA!
-country_event = {
-	id = akihabara.15
-	title = akihabara.15.t
-	desc = akihabara.15.d
-	picture =  GFX_report_event_first_contact
-	
-	is_triggered_only = yes
-	
-	option = { # oh god oh fuck
-		name = akihabara.15.a
-		#war with japan soon...
-      }
-      }
-	}
-	
-	
-}
-
-#Military squad dispatches to Akihabara
-country_event = {
-	id = akihabara.16
-	title = akihabara.16.t
-	desc = akihabara.16.d
-	picture =  GFX_report_event_first_contact
-	
-	is_triggered_only = yes
-	
-	option = { # Try to trap them, somehow?
-		name = akihabara.14.a    
-	    hidden_effect = {
-        country_event = {
-        id = akihabara.17
-        days = 5
-      }
-      }
-	}
-	
-	option = { # Attack them!
-		name = akihabara.14.a    
-	    hidden_effect = {
-        country_event = {
-        id = akihabara.18
-        days = 5
-      }
-      }
-	}
-	
-	
-}
-
-country_event = {
-	id = akihabara.17
-	title = akihabara.17.t
-	desc = akihabara.17.d
-	picture =  GFX_report_event_first_contact
-	
-	is_triggered_only = yes
-	
-	option = { # Hold them hostage
-		name = akihabara.17.a
-		
-	}
-	
-	option = { # Cnvince them to join us with tech
-		name = akihabara.17.a
-		
-	}
-	
-	
-}
-
-country_event = {
-	id = akihabara.18
-	title = akihabara.18.t
-	desc = akihabara.18.d
-	picture =  GFX_report_event_first_contact
-	
-	is_triggered_only = yes
-	
-	option = { # Banzai on these japanese
-		name = akihabara.18.a
-		
-	}
-	
-	
-}
-
-
