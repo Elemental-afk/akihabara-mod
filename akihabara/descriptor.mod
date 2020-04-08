@@ -6,4 +6,4 @@ tags={
 	"Events"
 }
 name="Akihabara Returns: Anime Nation Mod"
-supported_version="1.8.*"
+supported_version="1.9.*"

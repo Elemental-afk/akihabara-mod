@@ -8,18 +8,6 @@ technologies = {
 			utility_helicopter_equipment_1
 		}
 		
-		on_research_complete = {
-			limit = {
-				NOT = {
-					has_template_containing_unit = air_assault
-				}
-			}
-			hidden_effect = {
-				load_oob = "unlock_air_assault"
-			}			
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-		}
-		
 		allow = {
             always = no
         }

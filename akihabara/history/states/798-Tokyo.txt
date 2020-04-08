@@ -1,13 +1,11 @@
-state=
-{
-	id=789
-	name=Tokyo
+state = {
+	id = 798
+	name = "Tokyo"
 	manpower = 13000000
-	
+
 	state_category = megalopolis
-	
-	history =
-	{
+
+	history = {
 		owner = JAP
 		buildings = {
 			infrastructure = 8
@@ -17,9 +15,7 @@ state=
 			dockyard = 4
 			9998 = {
 				naval_base = 6
-
 			}
-
 		}
 		victory_points = {
 			1182 50 
@@ -31,9 +27,8 @@ state=
 				industrial_complex = 6
 			}
 		}
-
 	}
-	provinces={
+	provinces = {
 		1182 9998
 	}
 }

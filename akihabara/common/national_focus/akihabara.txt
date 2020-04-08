@@ -20,15 +20,15 @@ focus_tree = {
 		y = 0
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		available = {
-				has_full_control_of_state = 788
+				has_full_control_of_state = 797
 		}
 		
 		completion_reward = {
-			788 = {
+			797 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
 						set_building_level = {
@@ -50,7 +50,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -83,7 +83,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -111,7 +111,7 @@ focus_tree = {
 		y = 3
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -151,7 +151,7 @@ focus_tree = {
 		y = 4
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -193,7 +193,7 @@ focus_tree = {
 		y = 3
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -245,7 +245,7 @@ focus_tree = {
 		y = 5
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -283,7 +283,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -311,7 +311,7 @@ focus_tree = {
 		y = 3
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -377,14 +377,14 @@ focus_tree = {
 		y = 3
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
 					AND = {
-						NOT = { state = 788 }
+						NOT = { state = 797 }
 						free_building_slots = {
 							building = industrial_complex
 							size > 1
@@ -402,7 +402,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					AND = {
-						NOT = { state = 788 }
+						NOT = { state = 797 }
 						free_building_slots = {
 							building = industrial_complex
 							size > 1
@@ -452,7 +452,7 @@ focus_tree = {
 		y = 4
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -493,7 +493,7 @@ focus_tree = {
 		y = 5
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -530,7 +530,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = AKI_no_anime_at_work focus = AKI_non_discriminatory_workplaces }
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -548,7 +548,7 @@ focus_tree = {
 		y = 3
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		available = {
 			OR = {
@@ -687,7 +687,7 @@ focus_tree = {
 		y = 4
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		available = {
 			OR = {
@@ -716,7 +716,7 @@ focus_tree = {
 		y = 0
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -735,7 +735,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -761,7 +761,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -790,7 +790,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -819,7 +819,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -835,7 +835,7 @@ focus_tree = {
 				remove_idea = recovering_from_anomaly
 				add_idea = recovering_from_anomaly_1
 			}
-			788 = {
+			797 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
 					add_building_construction = {
@@ -857,7 +857,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -874,7 +874,7 @@ focus_tree = {
 		y = 3
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -890,7 +890,7 @@ focus_tree = {
 		y = 3
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -907,7 +907,7 @@ focus_tree = {
 		y = 4
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -922,7 +922,7 @@ focus_tree = {
 		y = 0
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -938,7 +938,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -954,7 +954,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -971,7 +971,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -988,7 +988,7 @@ focus_tree = {
 		y = 2
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1004,7 +1004,7 @@ focus_tree = {
 		y = 3
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1020,7 +1020,7 @@ focus_tree = {
 		y = 4
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1036,7 +1036,7 @@ focus_tree = {
 		y = 4
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1053,7 +1053,7 @@ focus_tree = {
 		y = 4
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1070,7 +1070,7 @@ focus_tree = {
 		y = 4
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1087,7 +1087,7 @@ focus_tree = {
 		y = 5
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1104,7 +1104,7 @@ focus_tree = {
 		y = 5
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1120,7 +1120,7 @@ focus_tree = {
 		y = 5
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1139,7 +1139,7 @@ focus_tree = {
 		y = 6
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1158,7 +1158,7 @@ focus_tree = {
 		y = 6
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1176,7 +1176,7 @@ focus_tree = {
 		y = 7
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1194,7 +1194,7 @@ focus_tree = {
 		y = 7
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -1212,7 +1212,7 @@ focus_tree = {
 		y = 7
 		cost = 10
 		ai_will_do = {
-			factor = #tbd 
+			factor = 1
 		}
 		
 		completion_reward = {
@@ -2356,7 +2356,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		complete_tooltip = {
-			788 = {
+			797 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = synthetic_refinery
@@ -2369,9 +2369,9 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_full_control_of_state = 788
+					has_full_control_of_state = 797
 				}
-				788 = {
+				797 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = synthetic_refinery

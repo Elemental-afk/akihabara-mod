@@ -1,13 +1,11 @@
-state=
-{
-	id=788
-	name="Akihabara"
+state = {
+	id = 797
+	name = "Akihabara"
 	manpower = 8000000
-	
+
 	state_category = megalopolis
-	
-	history =
-	{
+
+	history = {
 		owner = AKI
 		buildings = {
 			infrastructure = 2
@@ -17,7 +15,7 @@ state=
 		}
 		add_core_of = AKI
 	}
-	provinces={
-		13218
+	provinces = {
+		13234
 	}
 }
