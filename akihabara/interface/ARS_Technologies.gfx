@@ -6,5 +6,27 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/JAP_utility_helicopter_1.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_unit_air_recon_icon_small"
+		texturefile = "gfx/texticons/unit_paratrooper_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_unit_air_assault_icon_small"
+		texturefile = "gfx/texticons/unit_paratrooper_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_nato_air_recon_icon_small"
+		texturefile = "gfx/texticons/nato_unit_paratrooper_icon_small.dds"
+		legacy_lazy_load = no		
+	}
+	spriteType = {
+		name = "GFX_nato_air_assault_icon_small"
+		texturefile = "gfx/texticons/nato_unit_paratrooper_icon_small.dds"
+		legacy_lazy_load = no		
+	}
 	
 }

@@ -40,14 +40,14 @@ units = {
 	#Infantry 
 	division = {
 		name = "1st JSDF Division"
-		location = 13218
+		location = 13234
 		division_template = "Modern Infantry Division"					
 		start_experience_factor = 1
 	    start_equipment_factor = 0.4
 	}
 	division = {
 		name = "12th Air Assault Brigade"	
-		location = 13218
+		location = 13234
 		division_template = "Modern Air Assault Brigade"
 		start_experience_factor = 1
 	    start_equipment_factor = 0.4

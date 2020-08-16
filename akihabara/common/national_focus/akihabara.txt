@@ -1612,7 +1612,7 @@ focus_tree = {
 			focus = AKI_anime_conscripts 
 		}
 		mutually_exclusive = { 
-			focus = AKI_waifu_warpainting 
+			focus = AKI_school_uniforms 
 		}
 		x = 1
 		y = 3
